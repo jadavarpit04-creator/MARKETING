@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing — Zerthik</title>
+<meta name="description" content="Zerthik pricing: Free, Pro, Team and Business plans for Windows and macOS, with MCP and API access on paid plans." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="pages.css" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/zerthik-favicon.png" />
+<link rel="apple-touch-icon" href="assets/zerthik-favicon.png" />
+</head>
+<body class="page-pricing">
+<header class="nav-wrap" id="navbar">
+  <nav class="nav glass">
+    <a class="brand" href="index.html" aria-label="Zerthik home"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+    <div class="nav-links" id="navLinks"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html" class="page-active">Pricing</a><a href="api.html">API</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-white btn-sm" href="index.html#download">Download</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a><a href="index.html#download">Download</a></div>
+</header>
+<main class="page-main" id="main" tabindex="-1">
+<section class="page-hero"><div class="container">
+  <span class="eyebrow"><span class="ui-ic" data-ui="credit-card"></span> Pricing</span>
+  <h1>Start free. Scale when<br/>keystrokes become currency.</h1>
+  <p class="lead">Every plan includes the desktop app for Windows and macOS, universal insertion and personal Shortcuts. Paid plans add more actions, MCP connections and API access — no separate MCP credits, ever. Every new account starts with 14 days of Pro free — no card required. Upgrades and billing are managed inside the app.</p>
+  <div class="page-actions"><a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download free</a><a class="btn btn-dark btn-lg" href="how-it-works.html">How it works</a></div>
+  <div class="page-meta"><span class="pill">14-day Pro trial · No card required</span><span class="pill">Free plan · 50 actions/mo</span><span class="pill">Cancel anytime</span></div>
+</div></section><section class="page-section"><div class="container">
+<div class="page-section-head reveal"><h2>Plans</h2>
+<div class="billing-toggle" style="margin-top:18px">
+  <button class="tab bill-tab active" data-bill="monthly">Monthly</button>
+  <button class="tab bill-tab" data-bill="annual">Annual <span class="save-tag">−20%</span></button>
+</div></div>
+<div class="pricing-grid" id="pricingGrid"></div>
+<div class="enterprise-strip reveal">
+  <div><strong>Enterprise</strong><span>Custom actions, custom MCP, advanced compliance and private gateways.</span></div>
+  <a class="btn btn-dark" href="#" data-dead>Talk to sales</a>
+</div>
+<p class="pricing-note mono reveal">Add-ons: +500 AI actions $9/mo · Higher API limit $19/mo · Plans & billing managed in the app · Cancel anytime</p>
+</div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>What counts as an action?</h2></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="mouse-pointer-click"></span><h4>One command, one action</h4><p>Each completed transform — typed, dictated or via API — counts once. Regenerating a result counts as a new action.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="refresh-cw"></span><h4>Fallbacks are free</h4><p>If the primary model fails and the backup answers, that is still one action. Reliability never eats your allowance twice.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="history"></span><h4>Watch it in real time</h4><p>Usage is visible per user and per workspace, so a busy month is never a surprise invoice.</p></article></div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Included in paid plans</h2><p>The parts people upgrade for.</p></div>
+<div class="plan-highlights reveal">
+  <div class="plan-highlight"><span class="ic-badge" data-ui="brain"></span><div><h4>The full AI engine</h4><p>Primary model with automatic backup, validated output in five formats. <a href="ai.html">Explore the AI engine</a></p></div></div>
+  <div class="plan-highlight"><span class="ic-badge" data-ui="camera"></span><div><h4>Screenshot context</h4><p>Tables, dashboards and error dialogs become structured output in under 10 seconds.</p></div></div>
+  <div class="plan-highlight"><span class="ic-badge" data-ui="plug"></span><div><h4>MCP connections</h4><p>Personal servers on Pro, shared servers with role-based permissions on Team and Business. <a href="mcp.html">How MCP stays safe</a></p></div></div>
+  <div class="plan-highlight"><span class="ic-badge" data-ui="terminal"></span><div><h4>Developer API</h4><p>Personal and team keys for POST /v1/transform, with plan-based rate limits. <a href="api.html">Read the API overview</a></p></div></div>
+  <div class="plan-highlight"><span class="ic-badge" data-ui="users"></span><div><h4>Shared Shortcuts</h4><p>Publish one support voice, one issue format, one update style to the whole workspace.</p></div></div>
+  <div class="plan-highlight"><span class="ic-badge" data-ui="history"></span><div><h4>Usage & audit logs</h4><p>Every action, fallback and approval on the record — per user and per workspace.</p></div></div>
+</div></div></section>
+<section class="page-section" id="compare"><div class="container"><div class="page-section-head reveal"><h2>Compare all features</h2></div>
+<div class="compare-table reveal">
+  <div class="compare-row head"><div>Feature</div><div>Free</div><div>Pro</div><div>Team</div><div>Business</div></div>
+  <div class="compare-row"><div>AI actions included</div><div>50 / mo</div><div>1,000 / mo</div><div>2,500 / user</div><div>6,000 / user</div></div>
+  <div class="compare-row"><div>Command card · voice & text</div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div></div>
+  <div class="compare-row"><div>Universal insertion</div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div></div>
+  <div class="compare-row"><div>Screenshot context</div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div></div>
+  <div class="compare-row"><div>MCP servers</div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div>2 personal</div><div>10 shared</div><div>25 shared</div></div>
+  <div class="compare-row"><div>Developer API</div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div>60 req/min</div><div>120 req/min</div><div>300 req/min</div></div>
+  <div class="compare-row"><div>Shared Shortcuts & workspaces</div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div></div>
+  <div class="compare-row"><div>Admin controls & audit logs</div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div class="no"><span class="ui-ic" data-ui="x"></span></div><div class="yes"><span class="ui-ic" data-ui="check"></span></div></div>
+  <div class="compare-row"><div>Minimum seats</div><div>1</div><div>1</div><div>3</div><div>5</div></div>
+</div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Pricing questions</h2></div>
+<div class="faq-list reveal"><details><summary>How does the 14-day trial work?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Download the app and sign in — Pro switches on automatically for 14 days with the full allowance, MCP and API access, and no card is asked. If you do not upgrade, you move to the Free plan automatically and keep all your Shortcuts and settings.</p></details><details><summary>What happens when I run out of actions?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Zerthik tells you before you hit the wall. Add the +500 actions add-on, upgrade, or wait for the monthly reset — your Shortcuts and settings stay put.</p></details><details><summary>Do team plans pool actions?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Allowances are per user (2,500 on Team, 6,000 on Business), with minimum seats of 3 and 5. Admins see usage across the workspace.</p></details><details><summary>Is MCP really included?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Yes — MCP connections are part of paid plans, not a separate meter. Server counts differ by plan; approvals and blocks apply everywhere.</p></details><details><summary>Can I pay annually?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Yes — annual billing is roughly 20% less: Pro $96/yr, Team $154/yr per user, Business $269/yr per user.</p></details></div></div></section><section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Choosing a plan</h2><p>Rule of thumb from real usage patterns.</p></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="mouse-pointer-click"></span><h4>Trying it out? Start with the trial</h4><p>Your first 14 days are full Pro — 1,000 actions, MCP and API included, no card asked. Stay on Free afterwards and 50 actions a month still cover the everyday workflow.</p><div class="foot mono">14 DAYS FREE</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="brain"></span><h4>Heavy individual use? Pro</h4><p>1,000 actions, screenshot context, 2 personal MCP servers and your own API key. The plan most solo professionals land on.</p><div class="foot mono">PRO · $10/MO</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="users"></span><h4>A team that writes together? Team or Business</h4><p>Shared Shortcuts and MCP servers, team API keys and per-user allowances. Business adds admin controls, audit logs and role-based permissions.</p><div class="foot mono">TEAM $16 · BUSINESS $28</div></article></div>
+<dl class="spec-table reveal" style="margin-top:16px">
+  <div class="spec-row"><dt>billing</dt><dd>Monthly, or annual at roughly 20% less (Pro $96/yr · Team $154/yr per user · Business $269/yr per user). Checkout and invoices are handled from Plans & Billing inside the app; cancel anytime.</dd></div>
+  <div class="spec-row"><dt>add-ons</dt><dd>+500 AI actions for $9/mo · Higher API limit for $19/mo — stack them without changing plans.</dd></div>
+  <div class="spec-row"><dt>seats</dt><dd>Team starts at 3 seats, Business at 5. Allowances are per user; admins see workspace-wide usage.</dd></div>
+  <div class="spec-row"><dt>enterprise</dt><dd>Custom action volumes, custom MCP allowances and private gateways — talk to sales from the plans above.</dd></div>
+</dl></div></section><section class="container"><div class="page-cta reveal">
+  <h2>Take the shortcut.</h2><p>Download Zerthik for Windows and macOS. Every new account starts with 14 days of Pro free — no card required, then 50 actions a month on Free.</p>
+  <div class="page-actions" style="justify-content:center">
+    <a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download Zerthik</a>
+    <a class="btn btn-dark btn-lg" href="pricing.html">See pricing</a>
+  </div></div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+      <h5>Subscribe to our newsletter.</h5>
+      <p class="muted">Product updates, new Shortcuts and workflow ideas. Monthly, no spam.</p>
+      <form class="newsletter" id="newsletterForm">
+        <input type="email" required placeholder="you@company.com" aria-label="Email address" />
+        <button class="btn btn-white btn-sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-msg mono" id="newsletterMsg" role="status"></p>
+      <p class="tiny muted">By subscribing you agree to receive our monthly newsletter. Read our <a href="#" data-dead>privacy policy</a>. Unsubscribe anytime.</p>
+    </div>
+    <nav class="footer-col"><h6>Product</h6><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI engine</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">Developer API</a><a href="index.html#download">Download</a></nav>
+    <nav class="footer-col"><h6>Core Features</h6><a href="index.html#demo">Live demo</a><a href="index.html#how">How it works</a><a href="index.html#context">Context &amp; privacy</a><a href="index.html#ai">Output formats</a><a href="index.html#insert">Universal insertion</a><a href="index.html#whatelse">What else</a><a href="shortcuts.html">Shortcut library</a></nav>
+    <nav class="footer-col"><h6>Top Shortcuts</h6><a href="shortcuts.html">Issue from Error</a><a href="shortcuts.html">The Polite Nudge</a><a href="shortcuts.html">Metrics Table</a><a href="shortcuts.html">Reply in Our Voice</a><a href="shortcuts.html">Summarise Article</a><a href="shortcuts.html">Create your own</a></nav>
+    <nav class="footer-col"><h6>Company</h6><a href="#" data-dead>About</a><a href="#" data-dead>Blog</a><a href="#" data-dead>Careers</a><a href="#" data-dead>Press Kit</a><a href="#" data-dead>Contact</a><a href="#" data-dead>Terms</a><a href="#" data-dead>Privacy</a></nav>
+    <nav class="footer-col"><h6>Community</h6><a href="index.html#community">Guides</a><a href="api.html">Developers</a><a href="#" data-dead>API Docs</a><a href="#" data-dead>Support</a></nav>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© 2026 Zerthik. Turn any context into the output you need.</span>
+    <span class="footer-hotkey">Press <span class="kbd">Ctrl</span><span class="kbd">Space</span> anywhere. That's the whole trick.</span>
+  </div>
+  <div class="footer-streak" aria-hidden="true"></div>
+</footer>
+<div class="toast mono" id="toast" role="status"></div>
+<script src="icons.js"></script>
+<script src="lucide-icons.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

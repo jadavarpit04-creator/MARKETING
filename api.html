@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Developer API — Zerthik</title>
+<meta name="description" content="Build with the Zerthik API: turn context plus a command into validated output. Keys, limits, usage and approval-safe workflows." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="pages.css" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/zerthik-favicon.png" />
+<link rel="apple-touch-icon" href="assets/zerthik-favicon.png" />
+</head>
+<body class="page-api">
+<header class="nav-wrap" id="navbar">
+  <nav class="nav glass">
+    <a class="brand" href="index.html" aria-label="Zerthik home"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+    <div class="nav-links" id="navLinks"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html" class="page-active">API</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-white btn-sm" href="index.html#download">Download</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a><a href="index.html#download">Download</a></div>
+</header>
+<main class="page-main" id="main" tabindex="-1">
+<section class="page-hero"><div class="container">
+  <span class="eyebrow"><span class="ui-ic" data-ui="terminal"></span> Developer API</span>
+  <h1>Build with the<br/>Zerthik API.</h1>
+  <p class="lead">One endpoint for the same context-to-output engine that powers the desktop app. Send a command with its context; receive clean, validated output your product can use immediately.</p>
+  <div class="page-actions"><a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download free</a><a class="btn btn-dark btn-lg" href="#flow">See the flow</a></div>
+  <div class="page-meta"><span class="pill">Base URL · api.zerthik.app/v1</span><span class="pill">Bearer authentication</span><span class="pill">From the Pro plan</span></div>
+</div></section><section class="page-section"><div class="container">
+<div class="dev-blueprint reveal">
+  <div class="dev-hero">
+    <div class="dev-hero-copy">
+      <span class="fig-caption">FIG_01</span>
+      <h2>Build the<br/>perfect tools.</h2>
+      <p>Our API is designed to let anyone put the Zerthik context-to-output engine inside their own product.</p>
+      <div class="dev-hero-links"><a class="dev-doc-link" href="#flow">See the flow <span class="ui-ic" data-ui="arrow-right"></span></a></div>
+    </div>
+    <div class="dev-hero-art">
+        <div class="dev-flow-demo" aria-hidden="true">
+          <svg class="dev-flow-lines" viewBox="0 0 520 280" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="devBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#b8b8b8"/><stop offset="55%" stop-color="#a2a2a2"/><stop offset="100%" stop-color="#787878"/></linearGradient></defs>
+            <path class="dev-flow-path" d="M132 70 C 168 70, 176 140, 178 140"/><path class="dev-flow-beam b1" d="M132 70 C 168 70, 176 140, 178 140"/>
+            <path class="dev-flow-path" d="M132 140 C 152 140, 160 140, 178 140"/><path class="dev-flow-beam b2" d="M132 140 C 152 140, 160 140, 178 140"/>
+            <path class="dev-flow-path" d="M132 210 C 168 210, 176 140, 178 140"/><path class="dev-flow-beam b3" d="M132 210 C 168 210, 176 140, 178 140"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 54, 388 54"/><path class="dev-flow-beam b4" d="M342 140 C 362 140, 364 54, 388 54"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 112, 388 112"/><path class="dev-flow-beam b5" d="M342 140 C 362 140, 364 112, 388 112"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 168, 388 168"/><path class="dev-flow-beam b6" d="M342 140 C 362 140, 364 168, 388 168"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 226, 388 226"/><path class="dev-flow-beam b7" d="M342 140 C 362 140, 364 226, 388 226"/>
+          </svg>
+          <div class="dev-flow-side dev-flow-in">
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="scan-text"></span> Selected text</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="camera"></span> Screenshot</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="clipboard"></span> Clipboard</span>
+          </div>
+          <div class="dev-flow-core">
+            <span class="dev-flow-core-badge"><img src="assets/zerthik-logo.png" alt="" aria-hidden="true" /></span>
+            <strong>POST /v1/transform</strong>
+            <small>validated by Zerthik</small>
+          </div>
+          <div class="dev-flow-side dev-flow-out">
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="file-text"></span> Text</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="book-open"></span> Markdown</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="table"></span> Table</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="code-xml"></span> Code</span>
+          </div>
+          <span class="dev-flow-status mono">200 OK · 742 ms · 1 action</span>
+        </div>
+    </div>
+  </div>
+  <a class="dev-row" href="#keys"><div class="dev-cell dev-art-cell"><span class="fig-caption">FIG_02</span><span class="dev-key-demo" aria-hidden="true"><span class="dev-key-top"><span class="ui-ic" data-ui="key-round"></span><strong>Personal key</strong><em>Shown once</em></span><code>zt_live_••••••••••••9f2</code><span class="dev-key-row"><span><span class="ui-ic" data-ui="lock"></span> Stored hashed</span><span><span class="ui-ic" data-ui="ban"></span> Revoke anytime</span></span></span></div><div class="dev-cell dev-text-cell"><span class="dev-arrow ui-ic" data-ui="arrow-up-right"></span><h4>Keys in seconds</h4><p>Personal and team API keys — shown once, stored hashed, revocable anytime.</p></div></a>
+  <a class="dev-row flip" href="#limits"><div class="dev-cell dev-text-cell"><span class="dev-arrow ui-ic" data-ui="arrow-up-right"></span><h4>Limits you can plan around</h4><p>60, 120 or 300 requests a minute by plan — written down, never a surprise.</p></div><div class="dev-cell dev-art-cell"><span class="fig-caption">FIG_03</span><span class="dev-limit-demo" aria-hidden="true"><span class="dev-limit-row"><b>Pro</b><span class="dev-limit-track"><i style="--w:24%"></i></span><em>60/min</em></span><span class="dev-limit-row"><b>Team</b><span class="dev-limit-track"><i style="--w:48%"></i></span><em>120/min</em></span><span class="dev-limit-row"><b>Business</b><span class="dev-limit-track"><i style="--w:100%"></i></span><em>300/min</em></span><small>429 responses include a retry hint.</small></span></div></a>
+  <div class="dev-get-started"><a href="#flow">Get started <span class="ui-ic" data-ui="arrow-up-right"></span></a></div>
+</div></div></section><section class="page-section" id="flow"><div class="container"><div class="page-section-head reveal"><h2>From context to output, in one flow</h2><p>Your product sends what it already has. Zerthik does the thinking in the middle and hands back something finished.</p></div>
+<div class="beam-stage reveal" role="img" aria-label="Animated diagram: context sources flow into Zerthik and come out as finished formats">
+  <svg class="beam-svg" viewBox="0 0 900 380" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#8f8f8f"/><stop offset="55%" stop-color="#a2a2a2"/><stop offset="100%" stop-color="#787878"/></linearGradient></defs>
+    <path class="beam-path" d="M170 55 C 300 55, 300 190, 408 190"/><path class="beam-light b1" d="M170 55 C 300 55, 300 190, 408 190"/>
+    <path class="beam-path" d="M170 190 C 290 190, 300 190, 408 190"/><path class="beam-light b2" d="M170 190 C 290 190, 300 190, 408 190"/>
+    <path class="beam-path" d="M170 325 C 300 325, 300 190, 408 190"/><path class="beam-light b3" d="M170 325 C 300 325, 300 190, 408 190"/>
+    <path class="beam-path" d="M492 190 C 600 190, 610 45, 730 45"/><path class="beam-light b4" d="M492 190 C 600 190, 610 45, 730 45"/>
+    <path class="beam-path" d="M492 190 C 600 190, 610 135, 730 135"/><path class="beam-light b5" d="M492 190 C 600 190, 610 135, 730 135"/>
+    <path class="beam-path" d="M492 190 C 600 190, 610 245, 730 245"/><path class="beam-light b6" d="M492 190 C 600 190, 610 245, 730 245"/>
+    <path class="beam-path" d="M492 190 C 600 190, 610 335, 730 335"/><path class="beam-light b7" d="M492 190 C 600 190, 610 335, 730 335"/>
+  </svg>
+  <span class="beam-node" style="left:19%;top:14.5%"><span class="ui-ic" data-ui="scan-text"></span> Selected text</span>
+  <span class="beam-node" style="left:19%;top:50%"><span class="ui-ic" data-ui="camera"></span> Screenshot</span>
+  <span class="beam-node" style="left:19%;top:85.5%"><span class="ui-ic" data-ui="clipboard"></span> Clipboard</span>
+  <div class="beam-core"><span class="core-badge"><img class="core-logo" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /></span><small>Zerthik</small></div>
+  <span class="beam-node" style="left:81%;top:11.8%"><span class="ui-ic" data-ui="file-text"></span> Text</span>
+  <span class="beam-node" style="left:81%;top:35.5%"><span class="ui-ic" data-ui="book-open"></span> Markdown</span>
+  <span class="beam-node" style="left:81%;top:64.5%"><span class="ui-ic" data-ui="table"></span> Table · CSV</span>
+  <span class="beam-node" style="left:81%;top:88%"><span class="ui-ic" data-ui="code-xml"></span> Code</span>
+</div>
+<div class="beam-caption"><span>Your context</span><span>One instruction</span><span>Finished output</span></div>
+<div style="margin-top:26px"><div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="mic"></span><h4>Say it like you would out loud</h4><p>The instruction is a plain sentence — “turn this error into an issue draft” — not a schema to memorise.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="circle-check"></span><h4>Validated in the middle</h4><p>Format and facts are checked before the response leaves, with the backup model on standby.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="clipboard-paste"></span><h4>Ready where it lands</h4><p>Render it, store it, or insert it — the output arrives in the exact shape you asked for.</p></article></div></div>
+</div></section>
+<section class="page-section" id="keys"><div class="container"><div class="page-section-head reveal"><h2>Keys that behave</h2><p>Personal keys on Pro; team keys on Team and Business. Managed from the same place as your usage.</p></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="key-round"></span><h4>Shown once, stored hashed</h4><p>A new key is displayed exactly once and stored only as a hash. Lose it? Revoke and mint another — old keys die instantly.</p><div class="foot mono">PERSONAL & TEAM</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="lock"></span><h4>Bearer auth, nothing exotic</h4><p>Send the key as an Authorization: Bearer header over HTTPS. Keys inherit the plan and workspace of whoever created them.</p><div class="foot mono">HTTPS ONLY</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="ban"></span><h4>Revoke in one click</h4><p>A leaked key is a revoked key. Revocation is immediate and logged, and usage after revocation is rejected.</p></article></div></div></section>
+<section class="page-section" id="limits"><div class="container"><div class="page-section-head reveal"><h2>Rate limits & usage</h2><p>Limits are per key and reset every minute. Every successful transform counts as one AI action against the plan.</p></div>
+<dl class="spec-table reveal">
+  <div class="spec-row"><dt>Pro</dt><dd>60 requests / minute · personal key · 1,000 actions a month</dd></div>
+  <div class="spec-row"><dt>Team</dt><dd>120 requests / minute · team keys · 2,500 actions per user a month</dd></div>
+  <div class="spec-row"><dt>Business</dt><dd>300 requests / minute · team keys · 6,000 actions per user a month</dd></div>
+  <div class="spec-row"><dt>429 responses</dt><dd>Include a retry-after hint. Higher API limit add-on available at $19/mo.</dd></div>
+</dl></div></section>
+<section class="page-section" id="usage"><div class="container"><div class="page-section-head reveal"><h2>Everything on the record</h2></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="history"></span><h4>Logged per request</h4><p>Status, latency, action ID and which key made the call — visible in usage for users and admins.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="gauge"></span><h4>No surprise bills</h4><p>Actions are prepaid by plan, not metered after the fact. When the allowance ends, requests stop — they do not quietly bill.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="circle-check"></span><h4>Validated or rejected</h4><p>Responses are checked against the requested outputType. Malformed output triggers the backup model, not your error handler.</p></article></div></div></section>
+<section class="page-section" id="workflows"><div class="container"><div class="page-section-head reveal"><h2>MCP workflows over the API</h2><p>The API can trigger the same approval-based MCP workflows as the desktop app — under exactly the same rules.</p></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="shield-check"></span><h4>Approvals still apply</h4><p>A write triggered by API waits for a human approval just like one triggered by keyboard. The payload is shown in full.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="users"></span><h4>Workspace permissions</h4><p>Team keys act with the workspace's MCP permissions and role limits — never with more power than their owner.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="ban"></span><h4>Destructive stays blocked</h4><p>Blocked tools are blocked for API callers too. There is no header, flag or plan that talks around it.</p></article></div></div></section><section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Reference details</h2><p>The boring parts, written down — so integrations do not have to guess.</p></div>
+<dl class="spec-table reveal">
+  <div class="spec-row"><dt>authentication</dt><dd>Authorization: Bearer &lt;API key&gt; over HTTPS. Invalid or revoked keys are rejected; revocation is immediate.</dd></div>
+  <div class="spec-row"><dt>request body</dt><dd>JSON with command (string), context (object: selectedText, clipboard, activeApp, screenshot) and outputType (text · markdown · table · csv · code).</dd></div>
+  <div class="spec-row"><dt>success response</dt><dd>id, status, outputType and output. One successful transform = one AI action against the key owner's plan.</dd></div>
+  <div class="spec-row"><dt>rate limiting</dt><dd>60 / 120 / 300 requests per minute on Pro / Team / Business. Over the limit returns 429 with a retry hint.</dd></div>
+  <div class="spec-row"><dt>model fallback</dt><dd>If the primary model times out or returns malformed output, the backup model answers instead — same request, still one action.</dd></div>
+  <div class="spec-row"><dt>mcp workflows</dt><dd>API-triggered tool writes follow desktop rules: payload shown, human approval required, destructive tools blocked, everything logged.</dd></div>
+</dl></div></section><section class="container"><div class="page-cta reveal">
+  <h2>Build something with it.</h2><p>Get a personal key on Pro, or wire up the whole workspace on Team. The first endpoint is the only one you need to learn.</p>
+  <div class="page-actions" style="justify-content:center">
+    <a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download Zerthik</a>
+    <a class="btn btn-dark btn-lg" href="pricing.html">See pricing</a>
+  </div></div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+      <h5>Subscribe to our newsletter.</h5>
+      <p class="muted">Product updates, new Shortcuts and workflow ideas. Monthly, no spam.</p>
+      <form class="newsletter" id="newsletterForm">
+        <input type="email" required placeholder="you@company.com" aria-label="Email address" />
+        <button class="btn btn-white btn-sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-msg mono" id="newsletterMsg" role="status"></p>
+      <p class="tiny muted">By subscribing you agree to receive our monthly newsletter. Read our <a href="#" data-dead>privacy policy</a>. Unsubscribe anytime.</p>
+    </div>
+    <nav class="footer-col"><h6>Product</h6><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI engine</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">Developer API</a><a href="index.html#download">Download</a></nav>
+    <nav class="footer-col"><h6>Core Features</h6><a href="index.html#demo">Live demo</a><a href="index.html#how">How it works</a><a href="index.html#context">Context &amp; privacy</a><a href="index.html#ai">Output formats</a><a href="index.html#insert">Universal insertion</a><a href="index.html#whatelse">What else</a><a href="shortcuts.html">Shortcut library</a></nav>
+    <nav class="footer-col"><h6>Top Shortcuts</h6><a href="shortcuts.html">Issue from Error</a><a href="shortcuts.html">The Polite Nudge</a><a href="shortcuts.html">Metrics Table</a><a href="shortcuts.html">Reply in Our Voice</a><a href="shortcuts.html">Summarise Article</a><a href="shortcuts.html">Create your own</a></nav>
+    <nav class="footer-col"><h6>Company</h6><a href="#" data-dead>About</a><a href="#" data-dead>Blog</a><a href="#" data-dead>Careers</a><a href="#" data-dead>Press Kit</a><a href="#" data-dead>Contact</a><a href="#" data-dead>Terms</a><a href="#" data-dead>Privacy</a></nav>
+    <nav class="footer-col"><h6>Community</h6><a href="index.html#community">Guides</a><a href="api.html">Developers</a><a href="#" data-dead>API Docs</a><a href="#" data-dead>Support</a></nav>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© 2026 Zerthik. Turn any context into the output you need.</span>
+    <span class="footer-hotkey">Press <span class="kbd">Ctrl</span><span class="kbd">Space</span> anywhere. That's the whole trick.</span>
+  </div>
+  <div class="footer-streak" aria-hidden="true"></div>
+</footer>
+<div class="toast mono" id="toast" role="status"></div>
+<script src="icons.js"></script>
+<script src="lucide-icons.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

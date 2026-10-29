@@ -1,0 +1,418 @@
+{
+  "server": "npx -y mcp-universal-icons",
+  "generatedAt": "2026-10-26T12:12:59.428Z",
+  "collection": "lucide",
+  "tools": [
+    "health_check",
+    "search_icons",
+    "get_icon"
+  ],
+  "health": "✅ MCP Server is healthy. Iconify API is reachable.",
+  "searches": {
+    "microphone": "No icons found for 'microphone' in Lucide Icons. Try different keywords.",
+    "shield": "Found 19 icons in Lucide Icons:\nshield, shield-x, shield-ban, shield-cog, shield-off, shield-half, shield-lock, shield-plus, shield-user, user-shield, shield-alert, shield-check, shield-house, shield-minus, shield-keyhole, shield-ellipsis, brick-wall-shield, shield-cog-corner, shield-question-mark"
+  },
+  "results": [
+    {
+      "name": "app-window",
+      "ok": true,
+      "resolvedAs": "app-window",
+      "bytes": 243
+    },
+    {
+      "name": "arrow-right",
+      "ok": true,
+      "resolvedAs": "arrow-right",
+      "bytes": 212
+    },
+    {
+      "name": "arrow-up-right",
+      "ok": true,
+      "resolvedAs": "arrow-up-right",
+      "bytes": 210
+    },
+    {
+      "name": "ban",
+      "ok": true,
+      "resolvedAs": "ban",
+      "bytes": 254
+    },
+    {
+      "name": "book-open",
+      "ok": true,
+      "resolvedAs": "book-open",
+      "bytes": 348
+    },
+    {
+      "name": "bot",
+      "ok": true,
+      "resolvedAs": "bot",
+      "bytes": 272
+    },
+    {
+      "name": "braces",
+      "ok": true,
+      "resolvedAs": "braces",
+      "bytes": 328
+    },
+    {
+      "name": "briefcase",
+      "ok": true,
+      "resolvedAs": "briefcase",
+      "bytes": 265
+    },
+    {
+      "name": "camera",
+      "ok": true,
+      "resolvedAs": "camera",
+      "bytes": 406
+    },
+    {
+      "name": "check",
+      "ok": true,
+      "resolvedAs": "check",
+      "bytes": 205
+    },
+    {
+      "name": "chevron-down",
+      "ok": true,
+      "resolvedAs": "chevron-down",
+      "bytes": 202
+    },
+    {
+      "name": "circle-check",
+      "ok": true,
+      "resolvedAs": "circle-check",
+      "bytes": 248
+    },
+    {
+      "name": "clipboard",
+      "ok": true,
+      "resolvedAs": "clipboard",
+      "bytes": 302
+    },
+    {
+      "name": "clipboard-paste",
+      "ok": true,
+      "resolvedAs": "clipboard-paste",
+      "bytes": 348
+    },
+    {
+      "name": "code-xml",
+      "ok": true,
+      "resolvedAs": "code-xml",
+      "bytes": 231
+    },
+    {
+      "name": "command",
+      "ok": true,
+      "resolvedAs": "command",
+      "bytes": 261
+    },
+    {
+      "name": "copy",
+      "ok": true,
+      "resolvedAs": "copy",
+      "bytes": 285
+    },
+    {
+      "name": "credit-card",
+      "ok": true,
+      "resolvedAs": "credit-card",
+      "bytes": 238
+    },
+    {
+      "name": "database",
+      "ok": true,
+      "resolvedAs": "database",
+      "bytes": 292
+    },
+    {
+      "name": "download",
+      "ok": true,
+      "resolvedAs": "download",
+      "bytes": 270
+    },
+    {
+      "name": "external-link",
+      "ok": true,
+      "resolvedAs": "external-link",
+      "bytes": 266
+    },
+    {
+      "name": "eye-off",
+      "ok": true,
+      "resolvedAs": "eye-off",
+      "bytes": 434
+    },
+    {
+      "name": "file-code",
+      "ok": true,
+      "resolvedAs": "file-code",
+      "bytes": 378
+    },
+    {
+      "name": "file-text",
+      "ok": true,
+      "resolvedAs": "file-text",
+      "bytes": 361
+    },
+    {
+      "name": "gauge",
+      "ok": true,
+      "resolvedAs": "gauge",
+      "bytes": 228
+    },
+    {
+      "name": "globe",
+      "ok": true,
+      "resolvedAs": "globe",
+      "bytes": 284
+    },
+    {
+      "name": "graduation-cap",
+      "ok": true,
+      "resolvedAs": "graduation-cap",
+      "bytes": 365
+    },
+    {
+      "name": "history",
+      "ok": true,
+      "resolvedAs": "history",
+      "bytes": 276
+    },
+    {
+      "name": "inbox",
+      "ok": true,
+      "resolvedAs": "inbox",
+      "bytes": 338
+    },
+    {
+      "name": "info",
+      "ok": true,
+      "resolvedAs": "info",
+      "bytes": 246
+    },
+    {
+      "name": "key-round",
+      "ok": true,
+      "resolvedAs": "key-round",
+      "bytes": 422
+    },
+    {
+      "name": "keyboard",
+      "ok": true,
+      "resolvedAs": "keyboard",
+      "bytes": 295
+    },
+    {
+      "name": "landmark",
+      "ok": true,
+      "resolvedAs": "landmark",
+      "bytes": 315
+    },
+    {
+      "name": "layers",
+      "ok": true,
+      "resolvedAs": "layers",
+      "bytes": 475
+    },
+    {
+      "name": "life-buoy",
+      "ok": true,
+      "resolvedAs": "life-buoy",
+      "bytes": 338
+    },
+    {
+      "name": "list-checks",
+      "ok": true,
+      "resolvedAs": "list-checks",
+      "bytes": 236
+    },
+    {
+      "name": "lock",
+      "ok": true,
+      "resolvedAs": "lock",
+      "bytes": 255
+    },
+    {
+      "name": "log-in",
+      "ok": true,
+      "resolvedAs": "log-in",
+      "bytes": 252
+    },
+    {
+      "name": "mail",
+      "ok": true,
+      "resolvedAs": "mail",
+      "bytes": 263
+    },
+    {
+      "name": "menu",
+      "ok": true,
+      "resolvedAs": "menu",
+      "bytes": 213
+    },
+    {
+      "name": "messages-square",
+      "ok": true,
+      "resolvedAs": "messages-square",
+      "bytes": 406
+    },
+    {
+      "name": "mic",
+      "ok": true,
+      "resolvedAs": "mic",
+      "bytes": 256
+    },
+    {
+      "name": "monitor",
+      "ok": true,
+      "resolvedAs": "monitor",
+      "bytes": 237
+    },
+    {
+      "name": "mouse-pointer-click",
+      "ok": true,
+      "resolvedAs": "mouse-pointer-click",
+      "bytes": 367
+    },
+    {
+      "name": "play",
+      "ok": true,
+      "resolvedAs": "play",
+      "bytes": 272
+    },
+    {
+      "name": "plug-zap",
+      "ok": true,
+      "resolvedAs": "plug-zap",
+      "bytes": 313
+    },
+    {
+      "name": "plus",
+      "ok": true,
+      "resolvedAs": "plus",
+      "bytes": 206
+    },
+    {
+      "name": "refresh-cw",
+      "ok": true,
+      "resolvedAs": "refresh-cw",
+      "bytes": 339
+    },
+    {
+      "name": "rocket",
+      "ok": true,
+      "resolvedAs": "rocket",
+      "bytes": 478
+    },
+    {
+      "name": "scan-text",
+      "ok": true,
+      "resolvedAs": "scan-text",
+      "bytes": 304
+    },
+    {
+      "name": "search",
+      "ok": true,
+      "resolvedAs": "search",
+      "bytes": 245
+    },
+    {
+      "name": "send",
+      "ok": true,
+      "resolvedAs": "send",
+      "bytes": 344
+    },
+    {
+      "name": "server",
+      "ok": true,
+      "resolvedAs": "server",
+      "bytes": 281
+    },
+    {
+      "name": "settings",
+      "ok": true,
+      "resolvedAs": "settings",
+      "bytes": 555
+    },
+    {
+      "name": "shield",
+      "ok": true,
+      "resolvedAs": "shield",
+      "bytes": 352
+    },
+    {
+      "name": "shield-check",
+      "ok": true,
+      "resolvedAs": "shield-check",
+      "bytes": 384
+    },
+    {
+      "name": "sparkles",
+      "ok": true,
+      "resolvedAs": "sparkles",
+      "bytes": 503
+    },
+    {
+      "name": "table",
+      "ok": true,
+      "resolvedAs": "table",
+      "bytes": 258
+    },
+    {
+      "name": "terminal",
+      "ok": true,
+      "resolvedAs": "terminal",
+      "bytes": 212
+    },
+    {
+      "name": "text-cursor-input",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    },
+    {
+      "name": "timer",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    },
+    {
+      "name": "triangle-alert",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    },
+    {
+      "name": "users",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    },
+    {
+      "name": "wand-sparkles",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    },
+    {
+      "name": "x",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    },
+    {
+      "name": "zap",
+      "ok": false,
+      "resolvedAs": null,
+      "bytes": 0
+    }
+  ],
+  "serverInfo": {
+    "name": "universal-icons",
+    "version": "1.1.0"
+  },
+  "protocolVersion": "2024-11-05"
+}

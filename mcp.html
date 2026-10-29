@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MCP — Zerthik</title>
+<meta name="description" content="MCP in Zerthik is off by default: explicit connections, per-tool permissions, approval for every write, destructive actions blocked." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="pages.css" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/zerthik-favicon.png" />
+<link rel="apple-touch-icon" href="assets/zerthik-favicon.png" />
+</head>
+<body class="page-mcp">
+<header class="nav-wrap" id="navbar">
+  <nav class="nav glass">
+    <a class="brand" href="index.html" aria-label="Zerthik home"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+    <div class="nav-links" id="navLinks"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html" class="page-active">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-white btn-sm" href="index.html#download">Download</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a><a href="index.html#download">Download</a></div>
+</header>
+<main class="page-main" id="main" tabindex="-1">
+<section class="page-hero"><div class="container">
+  <span class="eyebrow"><span class="ui-ic" data-ui="plug"></span> MCP — off by default</span>
+  <h1>Zerthik sees your screen.<br/>MCP lets it act — with permission.</h1>
+  <p class="lead">Connect your own MCP servers when you are ready. Every tool gets explicit permissions, writes wait for your approval, and destructive actions stay blocked. Nothing is connected until you connect it.</p>
+  <div class="page-actions"><a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download free</a><a class="btn btn-dark btn-lg" href="api.html">Developer API</a></div>
+  <div class="page-meta"><span class="pill">Off by default</span><span class="pill">Approval for every write</span><span class="pill">Full action log</span></div>
+</div></section><section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Popular servers</h2><p>Connect the tools you already use. Zerthik discovers each server's tools — permissions stay with you.</p></div>
+<div class="server-list reveal">
+  <div class="server-row"><span data-brand="github"></span><div class="info"><strong>GitHub</strong><small>Issues, pull requests and code search</small></div><a class="btn btn-dark btn-sm" href="#" data-dead>Connect</a></div>
+  <div class="server-row"><span data-brand="linear"></span><div class="info"><strong>Linear</strong><small>Issues, projects and cycles</small></div><a class="btn btn-dark btn-sm" href="#" data-dead>Connect</a></div>
+  <div class="server-row"><span data-brand="notion"></span><div class="info"><strong>Notion</strong><small>Pages, databases and search</small></div><a class="btn btn-dark btn-sm" href="#" data-dead>Connect</a></div>
+  <div class="server-row"><span data-brand="googledrive"></span><div class="info"><strong>Google Drive</strong><small>Files and documents</small></div><a class="btn btn-dark btn-sm" href="#" data-dead>Connect</a></div>
+  <div class="server-row"><span data-brand="slack"></span><div class="info"><strong>Slack</strong><small>Channels, threads and search</small></div><a class="btn btn-dark btn-sm" href="#" data-dead>Connect</a></div>
+</div>
+<p class="tiny muted center" style="text-align:center;margin-top:14px">Any MCP server works — these are simply the ones people connect first.</p>
+</div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Permissions, per tool</h2><p>Connecting a server discovers its tools — it does not grant them. You decide what each tool may do, and you can change your mind anytime.</p></div>
+<article class="card reveal" style="max-width:820px;margin-inline:auto">
+  <h3 style="margin-top:0"><span class="ui-ic" data-ui="shield-check"></span> Tool permissions</h3>
+  <div class="perm-row"><span data-brand="github" class="chip-brand"></span><div class="perm-info"><strong>github.search_issues</strong><small>Read · no approval needed</small></div><button class="switch on" type="button" role="switch" aria-checked="true" aria-label="GitHub issue search"><i></i></button></div>
+  <div class="perm-row"><span data-brand="linear" class="chip-brand"></span><div class="perm-info"><strong>linear.create_issue</strong><small>Write · approval always required</small></div><span class="perm-lock"><span class="ui-ic" data-ui="lock"></span> Approval</span></div>
+  <div class="perm-row"><span data-brand="notion" class="chip-brand"></span><div class="perm-info"><strong>notion.create_page</strong><small>Write · approval always required</small></div><span class="perm-lock"><span class="ui-ic" data-ui="lock"></span> Approval</span></div>
+  <div class="perm-row"><span data-brand="googledrive" class="chip-brand"></span><div class="perm-info"><strong>drive.delete_file</strong><small>Destructive · blocked by default</small></div><span class="perm-lock blocked"><span class="ui-ic" data-ui="ban"></span> Blocked</span></div>
+  <p class="tiny muted" style="margin-top:14px">Reads can be switched off anytime. Writes are never toggles — they always stop for approval; destructive tools stay blocked.</p>
+</article></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>The rules never bend</h2></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="plug"></span><h4>Off until you turn it on</h4><p>A fresh Zerthik install has zero MCP connections. Servers are added explicitly, one at a time, by you or your admin.</p><div class="foot mono">DEFAULT · OFF</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="lock"></span><h4>Writes wait for a human</h4><p>Any tool that creates, edits or sends anything shows you the exact payload first. Approve it, edit it, or cancel — nothing runs silently.</p><div class="foot mono">APPROVAL REQUIRED</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="ban"></span><h4>Destructive means blocked</h4><p>Delete-style tools are blocked by default at every plan level. Unblocking is an explicit, logged admin decision.</p><div class="foot mono">BLOCKED BY DEFAULT</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="history"></span><h4>Every action, on the record</h4><p>Reads, approvals, cancellations and blocks land in the MCP action log — who, what, when, and with whose approval.</p><div class="foot mono">AUDIT LOG</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="users"></span><h4>Shared servers for teams</h4><p>Team and Business workspaces share approved MCP servers with role-based permissions, so the whole team automates the same safe way.</p><div class="foot mono">10–25 SHARED SERVERS</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="terminal"></span><h4>Same rules over the API</h4><p>Workflows triggered through the Developer API follow identical permissions. The API cannot talk its way around an approval.</p></article></div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Questions, answered</h2></div>
+<div class="faq-list reveal"><details><summary>Is MCP included in every plan?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Personal MCP connections start on Pro (2 servers). Team includes 10 shared servers and Business 25, with admin controls and audit logs.</p></details><details><summary>Can Zerthik ever write without asking me?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>No. Write tools always require an explicit approval showing the exact payload. Read tools run only after you have connected the server and allowed them.</p></details><details><summary>Which MCP servers work?<span class="ui-ic" data-ui="chevron-down"></span></summary><p>Any server that speaks the Model Context Protocol. Connect it, review its discovered tools, set permissions — done.</p></details></div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>How a connection is set up</h2><p>Four deliberate steps between “interesting” and “allowed”.</p></div>
+<div class="steps-rows reveal"><div class="step-row"><span class="num">STEP 01</span><h3>You add a server</h3><p>Nothing is pre-connected. You (or your workspace admin) add an MCP server explicitly and authenticate if it needs it.</p></div><div class="step-row"><span class="num">STEP 02</span><h3>Tools are discovered, not granted</h3><p>Zerthik lists every tool the server exposes. Discovery changes nothing — each tool still needs a permission from you.</p></div><div class="step-row"><span class="num">STEP 03</span><h3>You set the rules per tool</h3><p>Reads can be allowed after connection. Writes always require approval. Destructive tools start blocked and stay blocked until an admin decides otherwise.</p></div><div class="step-row"><span class="num">STEP 04</span><h3>Every use is on the record</h3><p>When Zerthik uses a tool, the action log captures the server, tool, payload summary, result — and who approved it, if approval was needed.</p></div></div></div></section><section class="container"><div class="page-cta reveal">
+  <h2>Take the shortcut.</h2><p>Download Zerthik for Windows and macOS. Every new account starts with 14 days of Pro free — no card required, then 50 actions a month on Free.</p>
+  <div class="page-actions" style="justify-content:center">
+    <a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download Zerthik</a>
+    <a class="btn btn-dark btn-lg" href="pricing.html">See pricing</a>
+  </div></div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+      <h5>Subscribe to our newsletter.</h5>
+      <p class="muted">Product updates, new Shortcuts and workflow ideas. Monthly, no spam.</p>
+      <form class="newsletter" id="newsletterForm">
+        <input type="email" required placeholder="you@company.com" aria-label="Email address" />
+        <button class="btn btn-white btn-sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-msg mono" id="newsletterMsg" role="status"></p>
+      <p class="tiny muted">By subscribing you agree to receive our monthly newsletter. Read our <a href="#" data-dead>privacy policy</a>. Unsubscribe anytime.</p>
+    </div>
+    <nav class="footer-col"><h6>Product</h6><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI engine</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">Developer API</a><a href="index.html#download">Download</a></nav>
+    <nav class="footer-col"><h6>Core Features</h6><a href="index.html#demo">Live demo</a><a href="index.html#how">How it works</a><a href="index.html#context">Context &amp; privacy</a><a href="index.html#ai">Output formats</a><a href="index.html#insert">Universal insertion</a><a href="index.html#whatelse">What else</a><a href="shortcuts.html">Shortcut library</a></nav>
+    <nav class="footer-col"><h6>Top Shortcuts</h6><a href="shortcuts.html">Issue from Error</a><a href="shortcuts.html">The Polite Nudge</a><a href="shortcuts.html">Metrics Table</a><a href="shortcuts.html">Reply in Our Voice</a><a href="shortcuts.html">Summarise Article</a><a href="shortcuts.html">Create your own</a></nav>
+    <nav class="footer-col"><h6>Company</h6><a href="#" data-dead>About</a><a href="#" data-dead>Blog</a><a href="#" data-dead>Careers</a><a href="#" data-dead>Press Kit</a><a href="#" data-dead>Contact</a><a href="#" data-dead>Terms</a><a href="#" data-dead>Privacy</a></nav>
+    <nav class="footer-col"><h6>Community</h6><a href="index.html#community">Guides</a><a href="api.html">Developers</a><a href="#" data-dead>API Docs</a><a href="#" data-dead>Support</a></nav>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© 2026 Zerthik. Turn any context into the output you need.</span>
+    <span class="footer-hotkey">Press <span class="kbd">Ctrl</span><span class="kbd">Space</span> anywhere. That's the whole trick.</span>
+  </div>
+  <div class="footer-streak" aria-hidden="true"></div>
+</footer>
+<div class="toast mono" id="toast" role="status"></div>
+<script src="icons.js"></script>
+<script src="lucide-icons.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

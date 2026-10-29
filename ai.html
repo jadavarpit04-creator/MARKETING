@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI — Zerthik</title>
+<meta name="description" content="The Zerthik AI engine: a primary model, an automatic backup, and validated output in text, Markdown, tables, CSV or code." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="pages.css" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/zerthik-favicon.png" />
+<link rel="apple-touch-icon" href="assets/zerthik-favicon.png" />
+</head>
+<body class="page-ai">
+<header class="nav-wrap" id="navbar">
+  <nav class="nav glass">
+    <a class="brand" href="index.html" aria-label="Zerthik home"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+    <div class="nav-links" id="navLinks"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html" class="page-active">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-white btn-sm" href="index.html#download">Download</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a><a href="index.html#download">Download</a></div>
+</header>
+<main class="page-main" id="main" tabindex="-1">
+<section class="page-hero"><div class="container">
+  <span class="eyebrow"><span class="ui-ic" data-ui="brain"></span> The AI engine</span>
+  <h1>An assistant that lives<br/>in every app.</h1>
+  <p class="lead">Zerthik routes every command to its primary AI model first. If that model times out, gets busy or returns something malformed, a backup model takes over automatically — you just see the result.</p>
+  <div class="page-actions"><a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download free</a><a class="btn btn-dark btn-lg" href="how-it-works.html">See the workflow</a></div>
+  <div class="page-meta"><span class="pill">Automatic backup model</span><span class="pill">Validated output</span><span class="pill">Simple transforms under 5 s</span></div>
+</div></section><section class="page-section"><div class="container">
+<div class="desktop-frame reveal">
+  <div class="desktop-bar"><span class="dots"><i></i><i></i><i></i></span><span>Gmail — Re: Proposal for Q3</span><span class="right mono">Quick AI · in place</span></div>
+  <div class="desktop-body"><div class="mini-demo glass-window">
+    <div class="chips"><span class="ctx-chip">Clipboard · call notes</span><span class="ctx-chip">Active app · Gmail</span></div>
+    <div class="list-label">Ask Zerthik</div>
+    <div class="mini-cmd"><span class="ui-ic" data-ui="mic"></span> “Reply politely, confirm Friday, ask for the signed copy.”</div>
+    <div class="list-label">Zerthik</div>
+    <div class="mini-out">Hi Sarah — thanks for the call. Friday works for us. Could you send the signed copy once legal has finished? We can lock onboarding right after.</div>
+  </div></div>
+</div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>How a command becomes output</h2><p>Two models, one promise: an answer you can paste — sorry, insert — without cleaning it up first.</p></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="brain"></span><h4>Primary model answers first</h4><p>Your context and instruction go to the primary model with the output format you asked for. Most commands end here, in a couple of seconds.</p><div class="foot mono">FIRST TO ANSWER</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="refresh-cw"></span><h4>Backup model, automatically</h4><p>Timeouts, busy signals and malformed replies trigger an instant handover to the backup model. The fallback is logged in your usage and never eats extra allowance.</p><div class="foot mono">AUTOMATIC FALLBACK</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="circle-check"></span><h4>Validated before it lands</h4><p>Output is checked against the requested format and the facts in your context — names, numbers and dates are preserved, never invented.</p><div class="foot mono">FACTS PRESERVED</div></article></div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Output in the shape the job needs</h2><p>Ask in words; receive in structure. The same context can come back five different ways.</p></div>
+<dl class="spec-table reveal">
+  <div class="spec-row"><dt>text</dt><dd>Clean prose for messages, emails and replies — ready to send as-is.</dd></div>
+  <div class="spec-row"><dt>markdown</dt><dd>Headings, lists and checklists for docs, issues and notes.</dd></div>
+  <div class="spec-row"><dt>table</dt><dd>Messy lists, expenses and metrics as aligned rows and columns.</dd></div>
+  <div class="spec-row"><dt>csv / tsv</dt><dd>Spreadsheet-ready data you can paste straight into Sheets or Excel.</dd></div>
+  <div class="spec-row"><dt>code</dt><dd>Snippets, regexes, SQL and type definitions — formatted for your editor.</dd></div>
+</dl></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Works inside your tools</h2><p>No integrations to install per app. If it has a text field, Zerthik is already there.</p></div>
+<div class="icon-cloud reveal" aria-hidden="true">
+  <div class="row"><span data-brand="slack"></span><span data-brand="Gmail"></span><span data-brand="notion"></span><span data-brand="visualstudiocode"></span><span data-brand="github"></span><span data-brand="googlechrome"></span></div>
+  <div class="row"><span data-brand="figma"></span><span data-brand="microsoftexcel"></span><span data-brand="microsoftword"></span><span data-brand="googledrive"></span><span data-brand="linear"></span><span data-brand="zoom"></span></div>
+</div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Guardrails you can read</h2></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="eye-off"></span><h4>Sensitive apps stay dark</h4><p>Password managers, banking apps and anything you blocklist are excluded by default. Zerthik cannot read what it cannot see.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="scan-text"></span><h4>Screenshots only on request</h4><p>Screen context is captured per-command, shown as a chip, and removable. There is no always-on recording.</p></article><article class="page-card reveal"><span class="ic-badge" data-ui="history"></span><h4>Every action is logged</h4><p>Commands, fallbacks and insertions appear in your activity and usage — for personal accounts and team admins alike.</p></article></div></div></section><section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>The latency & validation budget</h2><p>Numbers we design around — and what “validated” actually checks before anything touches your document.</p></div>
+<div class="page-grid-2">
+  <dl class="spec-table reveal">
+    <div class="spec-row"><dt>command card</dt><dd>Opens in under 300 ms</dd></div>
+    <div class="spec-row"><dt>simple transform</dt><dd>Under 5 seconds end to end</dd></div>
+    <div class="spec-row"><dt>screenshot context</dt><dd>Under 10 seconds, pixels to structured output</dd></div>
+    <div class="spec-row"><dt>insertion</dt><dd>Under 500 ms into the focused field</dd></div>
+  </dl>
+  <dl class="spec-table reveal">
+    <div class="spec-row"><dt>format check</dt><dd>Output must match the requested type — text, Markdown, table, CSV/TSV or code — or the backup model retries.</dd></div>
+    <div class="spec-row"><dt>fact check</dt><dd>Names, numbers, dates and amounts from your context are carried across exactly; gaps are flagged, not filled with inventions.</dd></div>
+    <div class="spec-row"><dt>fallback</dt><dd>Timeouts and malformed replies hand over to the backup model automatically — still counted as one action, and logged.</dd></div>
+    <div class="spec-row"><dt>final say</dt><dd>You preview before inserting. Edit, regenerate, or copy instead — nothing is sent or inserted behind your back.</dd></div>
+  </dl>
+</div></div></section><section class="container"><div class="page-cta reveal">
+  <h2>Take the shortcut.</h2><p>Download Zerthik for Windows and macOS. Every new account starts with 14 days of Pro free — no card required, then 50 actions a month on Free.</p>
+  <div class="page-actions" style="justify-content:center">
+    <a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download Zerthik</a>
+    <a class="btn btn-dark btn-lg" href="pricing.html">See pricing</a>
+  </div></div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+      <h5>Subscribe to our newsletter.</h5>
+      <p class="muted">Product updates, new Shortcuts and workflow ideas. Monthly, no spam.</p>
+      <form class="newsletter" id="newsletterForm">
+        <input type="email" required placeholder="you@company.com" aria-label="Email address" />
+        <button class="btn btn-white btn-sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-msg mono" id="newsletterMsg" role="status"></p>
+      <p class="tiny muted">By subscribing you agree to receive our monthly newsletter. Read our <a href="#" data-dead>privacy policy</a>. Unsubscribe anytime.</p>
+    </div>
+    <nav class="footer-col"><h6>Product</h6><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI engine</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">Developer API</a><a href="index.html#download">Download</a></nav>
+    <nav class="footer-col"><h6>Core Features</h6><a href="index.html#demo">Live demo</a><a href="index.html#how">How it works</a><a href="index.html#context">Context &amp; privacy</a><a href="index.html#ai">Output formats</a><a href="index.html#insert">Universal insertion</a><a href="index.html#whatelse">What else</a><a href="shortcuts.html">Shortcut library</a></nav>
+    <nav class="footer-col"><h6>Top Shortcuts</h6><a href="shortcuts.html">Issue from Error</a><a href="shortcuts.html">The Polite Nudge</a><a href="shortcuts.html">Metrics Table</a><a href="shortcuts.html">Reply in Our Voice</a><a href="shortcuts.html">Summarise Article</a><a href="shortcuts.html">Create your own</a></nav>
+    <nav class="footer-col"><h6>Company</h6><a href="#" data-dead>About</a><a href="#" data-dead>Blog</a><a href="#" data-dead>Careers</a><a href="#" data-dead>Press Kit</a><a href="#" data-dead>Contact</a><a href="#" data-dead>Terms</a><a href="#" data-dead>Privacy</a></nav>
+    <nav class="footer-col"><h6>Community</h6><a href="index.html#community">Guides</a><a href="api.html">Developers</a><a href="#" data-dead>API Docs</a><a href="#" data-dead>Support</a></nav>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© 2026 Zerthik. Turn any context into the output you need.</span>
+    <span class="footer-hotkey">Press <span class="kbd">Ctrl</span><span class="kbd">Space</span> anywhere. That's the whole trick.</span>
+  </div>
+  <div class="footer-streak" aria-hidden="true"></div>
+</footer>
+<div class="toast mono" id="toast" role="status"></div>
+<script src="icons.js"></script>
+<script src="lucide-icons.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "server": "npx -y mcp-universal-icons",
+  "generatedAt": "2026-10-26T14:17:54.050Z",
+  "collection": "lucide",
+  "tools": [
+    "health_check",
+    "search_icons",
+    "get_icon"
+  ],
+  "health": "✅ MCP Server is healthy. Iconify API is reachable.",
+  "searches": {
+    "microphone": "No icons found for 'microphone' in Lucide Icons. Try different keywords.",
+    "shield": "Found 19 icons in Lucide Icons:\nshield, shield-x, shield-ban, shield-cog, shield-off, shield-half, shield-lock, shield-plus, shield-user, user-shield, shield-alert, shield-check, shield-house, shield-minus, shield-keyhole, shield-ellipsis, brick-wall-shield, shield-cog-corner, shield-question-mark"
+  },
+  "results": [
+    {
+      "name": "eye",
+      "ok": true,
+      "resolvedAs": "eye",
+      "bytes": 329
+    }
+  ],
+  "serverInfo": {
+    "name": "universal-icons",
+    "version": "1.1.0"
+  },
+  "protocolVersion": "2024-11-05"
+}

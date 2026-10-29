@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zerthik — Turn any context into the output you need</title>
+<meta name="description" content="Zerthik is a universal AI context-to-output desktop tool for Windows and macOS. Select anything in any app, press one shortcut, say what you need — Zerthik writes it and inserts it where you work." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=7" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/zerthik-favicon.png" />
+<link rel="apple-touch-icon" href="assets/zerthik-favicon.png" />
+</head>
+<body class="home">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav class="section-rail" aria-label="Page sections">
+  <a href="#demo" data-rail="demo"><span>Demo</span></a>
+  <a href="#how" data-rail="how"><span>How it works</span></a>
+  <a href="#context" data-rail="context"><span>Privacy</span></a>
+  <a href="#shortcuts" data-rail="shortcuts"><span>Shortcuts</span></a>
+  <a href="#ai" data-rail="ai"><span>Output formats</span></a>
+  <a href="#personas" data-rail="personas"><span>Who it's for</span></a>
+  <a href="#insert" data-rail="insert"><span>Insert</span></a>
+  <a href="#whatelse" data-rail="whatelse"><span>What else</span></a>
+  <a href="#mcp" data-rail="mcp"><span>MCP</span></a>
+  <a href="#pricing" data-rail="pricing"><span>Pricing</span></a>
+  <a href="#community" data-rail="community"><span>Guides</span></a>
+  <a href="#api" data-rail="api"><span>Developer API</span></a>
+  <a href="#download" data-rail="download"><span>Download</span></a>
+</nav>
+<button class="back-top" id="backTop" type="button" aria-label="Back to top"><span class="ui-ic" data-ui="chevron-up"></span></button>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav-wrap" id="navbar">
+  <nav class="nav glass">
+    <a class="brand" href="#main" aria-label="Zerthik home">
+      <img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" />
+      <span class="brand-name">Zerthik</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="how-it-works.html">How it works</a>
+      <a href="shortcuts.html">Shortcuts</a>
+      <a href="ai.html">AI</a>
+      <a href="mcp.html">MCP</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="api.html">API</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-white btn-sm" href="#download">Download</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu">
+    <a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a>
+    <a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a>
+    <a href="#download">Download</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"><!-- ================= 1. HERO ================= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="aurora"><span></span><span></span><span></span><span></span></div>
+    <div class="streaks"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="hero-fade"></div>
+  </div>
+  <div class="hero-text container">
+    <a class="pill fade-up" href="#mcp"><span class="pill-dot"></span> New — MCP connections with approval-based actions <span class="ui-ic" data-ui="arrow-right"></span></a>
+    <h1 class="fade-up d1">Turn any context into<br/>the <span class="aurora-text">output</span> you need.</h1>
+    <p class="hero-sub fade-up d2">Zerthik is a universal AI layer for your desktop. Select anything in any app,
+      press one shortcut, say what you need — Zerthik writes it and inserts it right
+      where you were already working.</p>
+    <div class="hero-cta fade-up d3">
+      <a class="btn btn-white btn-lg" id="downloadBtn" href="#download">
+        <span data-brand-plain="windows11" id="heroOsIcon"></span>
+        <span id="downloadLabel">Download for Windows</span>
+      </a>
+      <a class="btn btn-dark btn-lg" href="#demo"><span class="ui-ic" data-ui="play"></span> See it in action</a>
+    </div>
+    <p class="hero-meta mono fade-up d4">Windows &amp; macOS · Free plan — 50 AI actions/month · Trigger:
+      <span class="kbd kbd-invert">Ctrl</span><span class="kbd kbd-invert">Space</span> /
+      <span class="kbd kbd-invert"><span class="ui-ic kbd-ic" data-ui="option"></span></span><span class="kbd kbd-invert">Space</span></p>
+  </div>
+</section>
+
+<!-- ================= 2. COMMAND CARD DEMO ================= -->
+<section class="section container" id="demo">
+  <div class="section-head reveal">
+    <h2>Whatever is on your screen is the prompt.</h2>
+    <p>One floating command card. Your selected text, clipboard, active app or a screenshot
+       becomes context — you add a command by voice or text — the result lands in the same field.</p>
+  </div>
+
+  <div class="live-demo reveal" id="liveDemo">
+    <div class="live-demo-glow" aria-hidden="true"></div>
+    <div class="live-demo-stage" id="liveDemoStage">
+      <iframe id="liveDemoApp" title="Zerthik desktop app — interactive live demo" data-src="demo/?demo=1&amp;embed=1" allow="clipboard-write" aria-label="Zerthik app live demo (auto-playing)" tabindex="-1"></iframe>
+      <noscript><p class="live-demo-noscript">Enable JavaScript, or <a href="demo/?demo=1">open the live demo full screen</a>.</p></noscript>
+    </div>
+    <div class="live-demo-status">
+      <div class="live-demo-segments" id="liveDemoSegments" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <p class="live-demo-note" id="liveDemoStatus" aria-live="polite">Live in your browser — the actual app, running the full Shortcut loop on its own.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORKS EVERYWHERE ================= -->
+<section class="container everywhere">
+  <p class="everywhere-title reveal">Works inside the apps you already use — <strong>because it works in <em>every</em> app</strong></p>
+  <div class="marquee magic-marquee reveal" id="marquee" aria-hidden="true" style="--duration:42s;--gap:3rem"></div>
+  <p class="everywhere-note reveal"><span class="ui-ic" data-ui="shield-check"></span>
+    App-agnostic by design. No hardcoded integrations — if it has a text field, supports the clipboard, or accepts keyboard input, Zerthik works there.</p>
+</section>
+
+<!-- ================= 3. HOW IT WORKS + KEYBOARD ================= -->
+<section class="section container" id="how">
+  <div class="section-head reveal">
+    <h2>It’s not about saving seconds.</h2>
+    <p>It’s about never leaving the app you’re in. The whole flow takes seconds — here is how it works.</p>
+  </div>
+  <div class="steps-grid">
+    <article class="card step-card reveal"><span class="step-num mono">01</span><span class="ic-badge" data-ui="keyboard"></span><h3>Press the shortcut</h3><p><span class="kbd">Ctrl</span><span class="kbd">Space</span> on Windows, <span class="kbd"><span class="ui-ic kbd-ic" data-ui="option"></span></span><span class="kbd">Space</span> on Mac. The card opens in <strong>under 300&nbsp;ms</strong> — and you can change the keys.</p></article>
+    <article class="card step-card reveal"><span class="step-num mono">02</span><span class="ic-badge" data-ui="scan-text"></span><h3>Context is captured</h3><p>Selected text, clipboard, the active app and window — or an optional screenshot. You see every chip before anything is sent, and can remove any of them.</p></article>
+    <article class="card step-card reveal"><span class="step-num mono">03</span><span class="ic-badge" data-ui="mic"></span><h3>Say or type the command</h3><p>"Turn this into a table." "Draft a reply." Voice or text — or run a saved <a href="#shortcuts" class="text-link">Shortcut</a> by name.</p></article>
+    <article class="card step-card reveal"><span class="step-num mono">04</span><span class="ic-badge" data-ui="clipboard-paste"></span><h3>Output lands in place</h3><p>Review, edit, hit Insert. The result is typed into the same field in <strong>under 500&nbsp;ms</strong> — or copied safely if direct insert is not possible.</p></article>
+  </div>
+
+  <div class="os-toggle reveal" role="tablist" aria-label="Choose your OS shortcut">
+    <button class="tab active" data-os="windows" role="tab" aria-selected="true"><span data-brand-plain="windows11"></span> Windows · Ctrl + Space</button>
+    <button class="tab" data-os="macos" role="tab" aria-selected="false" tabindex="-1"><span data-brand-plain="apple"></span> macOS · Option + Space</button>
+    <span class="os-hint mono" id="osHint">Only the keys that matter — press Ctrl + Space and watch them respond.</span>
+  </div>
+  <div class="shortcut-stage reveal">
+    <div class="keyboard-scroll">
+      <div class="keyboard keyboard-compact" id="keyboardMain" aria-label="Compact platform keyboard showing the Zerthik shortcut"></div>
+    </div>
+    <div class="shortcut-preview" aria-live="polite">
+      <img src="assets/zerthik-logo.png" alt="" aria-hidden="true" />
+      <div><strong id="shortcutPreviewTitle">Ctrl + Space</strong><span>Command card opens over your current app in under 300 ms.</span></div>
+      <span class="shortcut-ready"><span class="ui-ic" data-ui="timer"></span> Ready</span>
+    </div>
+    <div class="shortcut-features" aria-label="Shortcut benefits">
+      <span><span class="ui-ic" data-ui="timer"></span> &lt; 300 ms</span>
+      <span><span class="ui-ic" data-ui="mic"></span> Voice or text</span>
+      <span><span class="ui-ic" data-ui="shield-check"></span> Private by default</span>
+      <span><span class="ui-ic" data-ui="app-window"></span> Works anywhere</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. CONTEXT & PRIVACY ================= -->
+<section class="section container" id="context">
+  <div class="section-head reveal">
+    <span class="eyebrow"><span class="ui-ic" data-ui="lock"></span> Privacy by default</span>
+    <h2>You see the context.<br/>You control the context.</h2>
+    <p>Every capture source is visible as a chip, removable before anything is sent —
+       and sensitive apps are blocked before capture even starts.</p>
+  </div>
+  <div class="privacy-grid">
+    <article class="card reveal">
+      <span class="ic-badge" data-ui="layers"></span>
+      <h3>Context chips, always visible</h3>
+      <p>Try removing chips — this is exactly what the command card shows before a request is sent.</p>
+      <div class="chips chips-demo" id="chipsDemo"></div>
+      <button class="btn btn-dark btn-sm" id="chipsReset" type="button"><span class="ui-ic" data-ui="refresh-cw"></span> Reset chips</button>
+      <p class="tiny muted chips-status mono" id="chipsStatus"></p>
+    </article>
+    <article class="card reveal">
+      <span class="ic-badge" data-ui="settings"></span>
+      <h3>Your capture switches</h3>
+      <div class="toggle-list">
+        <div class="toggle-row"><span><span class="ui-ic" data-ui="clipboard"></span> Clipboard access</span><button class="switch on" type="button" role="switch" aria-checked="true" aria-label="Clipboard access"><i></i></button></div>
+        <div class="toggle-row"><span><span class="ui-ic" data-ui="camera"></span> Screenshot capture</span><button class="switch on" type="button" role="switch" aria-checked="true" aria-label="Screenshot capture"><i></i></button></div>
+        <div class="toggle-row"><span><span class="ui-ic" data-ui="app-window"></span> Active-app detection</span><button class="switch on" type="button" role="switch" aria-checked="true" aria-label="Active-app detection"><i></i></button></div>
+      </div>
+      <p class="tiny muted">Screenshot capture is always shown as a chip before anything runs — remove it there, or turn it off here for good.</p>
+    </article>
+    <article class="card reveal">
+      <span class="ic-badge badge-red" data-ui="ban"></span>
+      <h3>Blocked by default</h3>
+      <p>Zerthik never captures context from sensitive places — no setup needed.</p>
+      <div class="guard-panel">
+        <ul class="guard-list" aria-label="Apps and windows blocked by default">
+          <li class="guard-row"><span class="guard-tile"><span class="ui-ic" data-ui="key-round"></span></span><span class="guard-info"><strong>1Password</strong><small>Password manager</small></span><span class="status-pill"><span class="ui-ic" data-ui="ban"></span> Blocked</span></li>
+          <li class="guard-row"><span class="guard-tile"><span class="ui-ic" data-ui="lock"></span></span><span class="guard-info"><strong>Bitwarden</strong><small>Password manager</small></span><span class="status-pill"><span class="ui-ic" data-ui="ban"></span> Blocked</span></li>
+          <li class="guard-row"><span class="guard-tile"><span class="ui-ic" data-ui="landmark"></span></span><span class="guard-info"><strong>Banking &amp; finance apps</strong><small>Detected automatically</small></span><span class="status-pill"><span class="ui-ic" data-ui="ban"></span> Blocked</span></li>
+          <li class="guard-row"><span class="guard-tile"><span class="ui-ic" data-ui="eye-off"></span></span><span class="guard-info"><strong>Private / incognito windows</strong><small>Any browser, any profile</small></span><span class="status-pill"><span class="ui-ic" data-ui="ban"></span> Blocked</span></li>
+          <li class="guard-row guard-add"><span class="guard-tile"><span class="ui-ic" data-ui="plus"></span></span><span class="guard-info"><strong>Any app you add yourself</strong><small>Block apps &amp; domains anytime</small></span><span class="status-pill"><span class="ui-ic" data-ui="plus"></span> Add</span></li>
+        </ul>
+
+      </div>
+    </article>
+    <article class="card reveal">
+      <span class="ic-badge badge-green" data-ui="shield-check"></span>
+      <h3>What we never store</h3>
+      <ul class="check-list">
+        <li><span class="ui-ic ok" data-ui="check"></span> No full clipboard content, selected text or screenshots in logs</li>
+        <li><span class="ui-ic ok" data-ui="check"></span> Only redacted summaries, status, latency and model used</li>
+        <li><span class="ui-ic ok" data-ui="check"></span> API keys stored hashed · MCP credentials encrypted at rest</li>
+        <li><span class="ui-ic ok" data-ui="check"></span> Provider keys live server-side — never in the desktop app</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 7. SHORTCUT LIBRARY ================= -->
+<section class="section" id="shortcuts">
+  <div class="container section-head reveal">
+    <h2>There’s a Shortcut for that.</h2>
+    <p>Any command can become a reusable Shortcut — with its own name, tone and output format.
+       Team admins can share them across the whole workspace.</p>
+  </div>
+  <div class="container ext-controls reveal">
+    <div class="tabs" role="tablist" aria-label="Shortcut categories">
+      <button class="tab sc-tab active" data-cat="developer" role="tab"><span class="ui-ic" data-ui="code-xml"></span> Developer</button>
+      <button class="tab sc-tab" data-cat="founder" role="tab"><span class="ui-ic" data-ui="rocket"></span> Founder</button>
+      <button class="tab sc-tab" data-cat="support" role="tab"><span class="ui-ic" data-ui="life-buoy"></span> Support</button>
+      <button class="tab sc-tab" data-cat="research" role="tab"><span class="ui-ic" data-ui="graduation-cap"></span> Research</button>
+    </div>
+    <div class="carousel-btns">
+      <button class="cbtn" id="scPrev" aria-label="Previous shortcuts">←</button>
+      <button class="cbtn" id="scNext" aria-label="Next shortcuts">→</button>
+    </div>
+  </div>
+  <div class="ext-viewport reveal" data-carousel><div class="ext-track" id="scTrack" tabindex="0" role="region" aria-label="Shortcut cards. Use left and right arrow keys to browse."></div></div>
+  <div class="container center reveal"><a class="btn btn-dark" href="shortcuts.html">Browse the Shortcut library <span class="ui-ic" data-ui="arrow-right"></span></a></div>
+</section>
+
+<!-- ================= 5. AI ENGINE ================= -->
+<section class="section container" id="ai">
+
+  <div class="formats reveal">
+
+    <div class="tabs" role="tablist" aria-label="Output formats">
+      <button class="tab active" data-fmt="text" role="tab"><span class="ui-ic" data-ui="file-text"></span> Text</button>
+      <button class="tab" data-fmt="markdown" role="tab"><span class="ui-ic" data-ui="book-open"></span> Markdown</button>
+      <button class="tab" data-fmt="table" role="tab"><span class="ui-ic" data-ui="table"></span> Table</button>
+      <button class="tab" data-fmt="csv" role="tab"><span class="ui-ic" data-ui="file-code"></span> CSV / TSV</button>
+      <button class="tab" data-fmt="code" role="tab"><span class="ui-ic" data-ui="code-xml"></span> Code</button>
+    </div>
+    <pre class="format-out mono" id="formatOut"></pre>
+  </div>
+</section>
+
+<!-- ================= 9. PERSONAS ================= -->
+<section class="section container" id="personas">
+  <div class="section-head reveal">
+    <h2>Built for people who<br/>switch apps all day.</h2>
+    <p>Five jobs, one shortcut. Pick a role — see the context they start with, the command they run, and where the answer lands.</p>
+  </div>
+  <div class="people reveal" id="peopleRow"></div>
+  <div class="testimonial-panel glass-window reveal" id="personaPanel">
+    <div class="t-col">
+      <p class="list-label">The daily need</p>
+      <h4 id="pNeed">—</h4>
+      <p id="pNeedDesc" class="muted">—</p>
+    </div>
+    <div class="t-col">
+      <p class="list-label">Context used</p>
+      <h4 id="pContext">—</h4>
+      <p id="pContextDesc" class="muted">—</p>
+    </div>
+    <div class="t-col">
+      <p class="list-label">Where it lands</p>
+      <h4><span id="pAppIcon"></span> <span id="pApp">—</span></h4>
+      <p id="pAppDesc" class="muted">—</p>
+    </div>
+    <blockquote class="t-quote" id="pQuote">—</blockquote>
+  </div>
+</section>
+
+<!-- ================= 6. UNIVERSAL INSERTION (live demo) ================= -->
+<section class="section container" id="insert">
+  <div class="section-head bento-head reveal">
+    <h2>Don’t copy. Don’t paste.<br/>Just insert.</h2>
+    <p>The result lands in the app you were already using.</p>
+  </div>
+
+  <div class="bento insert-bento">
+    <article class="card bento-wide insert-card-main reveal">
+      <ol class="insert-flow" aria-label="Insertion flow">
+        <li><span>1</span> Zerthik output</li>
+        <li><span>2</span> Insert</li>
+        <li><span>3</span> Slack field</li>
+      </ol>
+      <div class="insert-card-copy">
+        <h5 class="bento-label"><span class="ui-ic" data-ui="clipboard-paste"></span> Universal insertion</h5>
+        <p>Tired of carrying AI output between apps? Zerthik writes it directly into the
+           focused field — and falls back safely if that field says no.</p>
+        <div class="insert-source-box">
+          <div class="insert-source-head">
+            <img class="insert-logo" src="assets/zerthik-logo.png" alt="" aria-hidden="true" />
+            <strong>Zerthik output</strong>
+
+            <span class="insert-count mono" id="insertCount">169 characters</span>
+          </div>
+          <p id="insertText">Hi team — quick update: the release is green across Windows and macOS. All 214 tests pass, so we ship tomorrow at 10 AM. Thanks to everyone who reviewed on short notice!</p>
+        </div>
+        <div class="insert-btns">
+          <button class="btn btn-white" id="insertBtn" type="button"><span class="ui-ic" data-ui="clipboard-paste"></span> Insert</button>
+          <button class="btn btn-dark" id="copyOutBtn" type="button"><span class="ui-ic" data-ui="copy"></span> Copy</button>
+          <button class="btn btn-dark" id="regenBtn" type="button"><span class="ui-ic" data-ui="refresh-cw"></span> Regenerate</button>
+        </div>
+        <p class="tiny mono insert-status" id="insertStatus">Ready — press Insert and watch it land in Slack.</p>
+      </div>
+      <span class="insert-flow-arrow" aria-hidden="true"><span class="ui-ic" data-ui="arrow-right"></span></span>
+      <div class="insert-visual" aria-hidden="true">
+        <div class="insert-glass-bg"></div>
+        <div class="slack-composer-card">
+          <div class="slack-composer-head"><span data-brand="slack"></span><strong>Slack</strong><span>#releases</span></div>
+          <p class="slack-mini-msg"><strong>Rahul</strong> Windows build is green from my side.</p>
+          <p class="slack-mini-msg"><strong>Emily</strong> Are both desktop builds green?</p>
+          <div class="target-field mono" id="targetField"><span class="target-placeholder">Message #releases…</span><span class="caret"></span></div>
+          <div class="slack-composer-foot"><span class="ui-ic" data-ui="plus"></span><span class="ui-ic" data-ui="mic"></span><span class="slack-send">Send</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card insert-card-ladder reveal">
+      <ol class="insert-ladder insert-mini-ladder">
+        <li data-step="1"><span class="ui-ic" data-ui="text-cursor-input"></span> Accessibility insert</li>
+        <li data-step="2"><span class="ui-ic" data-ui="clipboard-paste"></span> Clipboard paste</li>
+        <li data-step="3"><span class="ui-ic" data-ui="keyboard"></span> Keyboard simulation</li>
+        <li data-step="4"><span class="ui-ic" data-ui="clipboard"></span> Copy fallback</li>
+      </ol>
+      <h5 class="bento-label"><span class="ui-ic" data-ui="layers"></span> Four ways in</h5>
+      <p>If one route is blocked, Zerthik quietly tries the next — the words still arrive.</p>
+    </article>
+
+    <article class="card insert-card-apps reveal">
+      <div class="insert-apps-visual" aria-hidden="true">
+        <span class="big-keycap"><span class="ui-ic" data-ui="corner-down-left"></span></span>
+        <div class="insert-app-row"><span data-brand="slack"></span><span data-brand="Gmail"></span><span data-brand="notion"></span><span data-brand="visualstudiocode"></span><span data-brand="googlechrome"></span></div>
+      </div>
+      <h5 class="bento-label"><span class="ui-ic" data-ui="app-window"></span> Works where text goes</h5>
+      <p>Editors, browsers, chat, docs and terminals — under 500 ms, with no app-specific plugin.</p>
+    </article>
+  </div>
+</section>
+
+
+<!-- ================= WHAT ELSE — rotator ================= -->
+<section class="section container" id="whatelse">
+  <div class="section-head reveal"><h2>What else can Zerthik do?</h2></div>
+  <div class="rotator reveal">
+    <ul class="rotator-list" id="rotatorList"></ul>
+    <div class="rotator-panel glass-window">
+      <span class="ic-badge" id="rotIcon"></span>
+      <h3 id="rotTitle">—</h3>
+      <p id="rotDesc">—</p>
+      <div class="rot-mock" id="rotMock"></div>
+    </div>
+  </div>
+</section>
+<!-- ================= 8. MCP ================= -->
+<section class="section container" id="mcp">
+  <div class="section-head reveal">
+    <span class="eyebrow"><span class="ui-ic" data-ui="plug"></span> MCP — off by default</span>
+    <h2>Zerthik understands your screen.<br/>MCP lets it act — with permission.</h2>
+    <p>Connect your own MCP servers when you are ready. Every tool gets explicit permissions,
+       writes wait for your approval, and destructive actions stay blocked.</p>
+  </div>
+  <div class="mcp-grid">
+    <article class="card card-orbit reveal">
+      <div class="orbit" aria-hidden="true">
+        <div class="orbit-ring" id="orbitRing"></div>
+        <div class="orbit-center"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /></div>
+      </div>
+      <h3>Connect the tools you already use</h3>
+      <p>GitHub, Linear, Notion, Drive and more — Zerthik can read context from connected servers and act only with your approval.</p>
+    </article>
+
+    <article class="card reveal mcp-perms">
+      <h3 style="margin-top:0"><span class="ui-ic" data-ui="shield-check"></span> Tool permissions</h3>
+      <p class="perm-group">Read access</p>
+      <div class="perm-row"><span data-brand="github" class="chip-brand"></span><div class="perm-info"><strong>github.search_issues</strong><small>Read · no approval needed</small></div><button class="switch on" type="button" role="switch" aria-checked="true" aria-label="GitHub issue search" data-perm><i></i></button></div>
+      <p class="perm-group">Writes need approval</p>
+      <div class="perm-row"><span data-brand="linear" class="chip-brand"></span><div class="perm-info"><strong>linear.create_issue</strong><small>Write · approval always required</small></div><span class="perm-lock"><span class="ui-ic" data-ui="lock"></span> Approval</span></div>
+      <div class="perm-row"><span data-brand="notion" class="chip-brand"></span><div class="perm-info"><strong>notion.create_page</strong><small>Write · approval always required</small></div><span class="perm-lock"><span class="ui-ic" data-ui="lock"></span> Approval</span></div>
+      <p class="perm-group">Blocked by default</p>
+      <div class="perm-row"><span data-brand="googledrive" class="chip-brand"></span><div class="perm-info"><strong>drive.delete_file</strong><small>Destructive · blocked by default</small></div><span class="perm-lock blocked"><span class="ui-ic" data-ui="ban"></span> Blocked</span></div>
+
+      <div class="mcp-try">
+        <button class="btn btn-white btn-sm" id="mcpTry" type="button"><span data-brand-plain="linear"></span> Try an approval</button>
+        <span class="tiny muted">See exactly what happens before a write runs.</span>
+      </div>
+      <div class="approval" id="mcpApproval" hidden>
+        <div class="approval-head"><span data-brand="linear"></span><div><strong>Linear · create_issue</strong><small>Growth workspace</small></div><span class="tag tag-warn"><span class="ui-ic" data-ui="timer"></span> Waiting</span></div>
+        <p class="approval-payload mono">title: "Follow up: pricing page experiment"<br/>team: Growth · priority: Medium</p>
+        <div class="approval-btns"><button class="btn btn-white btn-sm approval-primary" id="mcpApprove" type="button"><span class="ui-ic" data-ui="check"></span> Approve &amp; run</button><button class="btn btn-dark btn-sm approval-secondary" id="mcpCancel" type="button"><span class="ui-ic" data-ui="x"></span> Cancel</button></div>
+      </div>
+
+      <h4 class="log-title"><span class="ui-ic" data-ui="history"></span> MCP action log</h4>
+      <ul class="log-list mono" id="mcpLog">
+        <li><span class="log-ok"><span class="ui-ic" data-ui="circle-check"></span> approved</span> linear.create_issue · 2m ago</li>
+        <li><span class="log-ok"><span class="ui-ic" data-ui="eye"></span> read</span> github.search_issues · 9m ago</li>
+        <li><span class="log-block"><span class="ui-ic" data-ui="ban"></span> blocked</span> drive.delete_file · yesterday</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 10. PRICING ================= -->
+<section class="section container" id="pricing">
+  <div class="section-head reveal">
+    <h2>Start free. Scale when<br/>keystrokes become currency.</h2>
+    <p>Every plan includes the desktop app for Windows and macOS, and every new account starts with 14 days of Pro free — no card required. MCP is included in paid
+       plans — no separate MCP credits, ever.</p>
+    <div class="billing-toggle" role="tablist" aria-label="Billing period">
+      <button class="tab bill-tab active" data-bill="monthly" role="tab" aria-selected="true">Monthly</button>
+      <button class="tab bill-tab" data-bill="annual" role="tab" aria-selected="false">Annual <span class="save-tag">Save 20%</span></button>
+    </div>
+    <p class="billing-note" id="billingNote" role="status" aria-live="polite">Switch to Annual to save 20% on every paid plan.</p>
+  </div>
+  <div class="pricing-grid" id="pricingGrid"></div>
+  <div class="enterprise-strip reveal">
+    <div><strong>Enterprise</strong><span>Custom actions, custom MCP, advanced compliance and private gateways.</span></div>
+    <a class="btn btn-dark" href="#" data-dead>Talk to sales</a>
+  </div>
+  <p class="pricing-note mono reveal">Add-ons: +500 AI actions $9/mo · Higher API limit $19/mo · Plans & billing managed in the app · Cancel anytime</p>
+</section>
+
+<!-- ================= 12. GUIDES + COMMUNITY ================= -->
+<section class="section" id="community">
+  <div class="container section-head reveal">
+    <h2>Stay in the loop.</h2>
+    <p>Short guides from the docs — and a community that ships Shortcuts like recipes.</p>
+  </div>
+  <div class="video-viewport reveal" data-carousel><div class="video-track" id="guideTrack" tabindex="0" role="region" aria-label="Guide cards. Use left and right arrow keys to browse."></div></div>
+</section>
+
+<!-- ================= 11. API / DEVELOPERS ================= -->
+<section class="section container" id="api">
+  <div class="dev-blueprint reveal">
+    <div class="dev-hero">
+      <div class="dev-hero-copy">
+        <span class="fig-caption">FIG_01</span>
+        <span class="eyebrow"><span class="ui-ic" data-ui="terminal"></span> Developer API</span>
+        <h2>Build the<br/>perfect tools.</h2>
+        <p>Our API is designed to let anyone put the Zerthik context-to-output engine
+           inside their own product — one endpoint, validated output.</p>
+        <div class="dev-hero-links">
+          <a class="dev-doc-link" href="#" data-dead>View Docs <span class="ui-ic" data-ui="arrow-up-right"></span></a>
+          <a class="dev-doc-link" href="#" data-dead>Get an API key <span class="ui-ic" data-ui="arrow-up-right"></span></a>
+        </div>
+      </div>
+      <div class="dev-hero-art">
+        <div class="dev-flow-demo" aria-hidden="true">
+          <svg class="dev-flow-lines" viewBox="0 0 520 280" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="devBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#b8b8b8"/><stop offset="55%" stop-color="#a2a2a2"/><stop offset="100%" stop-color="#787878"/></linearGradient></defs>
+            <path class="dev-flow-path" d="M132 70 C 168 70, 176 140, 178 140"/><path class="dev-flow-beam b1" d="M132 70 C 168 70, 176 140, 178 140"/>
+            <path class="dev-flow-path" d="M132 140 C 152 140, 160 140, 178 140"/><path class="dev-flow-beam b2" d="M132 140 C 152 140, 160 140, 178 140"/>
+            <path class="dev-flow-path" d="M132 210 C 168 210, 176 140, 178 140"/><path class="dev-flow-beam b3" d="M132 210 C 168 210, 176 140, 178 140"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 54, 388 54"/><path class="dev-flow-beam b4" d="M342 140 C 362 140, 364 54, 388 54"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 112, 388 112"/><path class="dev-flow-beam b5" d="M342 140 C 362 140, 364 112, 388 112"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 168, 388 168"/><path class="dev-flow-beam b6" d="M342 140 C 362 140, 364 168, 388 168"/>
+            <path class="dev-flow-path" d="M342 140 C 362 140, 364 226, 388 226"/><path class="dev-flow-beam b7" d="M342 140 C 362 140, 364 226, 388 226"/>
+          </svg>
+          <div class="dev-flow-side dev-flow-in">
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="scan-text"></span> Selected text</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="camera"></span> Screenshot</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="clipboard"></span> Clipboard</span>
+          </div>
+          <div class="dev-flow-core">
+            <span class="dev-flow-core-badge"><img src="assets/zerthik-logo.png" alt="" aria-hidden="true" /></span>
+            <strong>POST /v1/transform</strong>
+            <small>validated by Zerthik</small>
+          </div>
+          <div class="dev-flow-side dev-flow-out">
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="file-text"></span> Text</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="book-open"></span> Markdown</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="table"></span> Table</span>
+            <span class="dev-demo-chip"><span class="ui-ic" data-ui="code-xml"></span> Code</span>
+          </div>
+          <span class="dev-flow-status mono">200 OK · 742 ms · 1 action</span>
+        </div>
+      </div>
+    </div>
+
+    <a class="dev-row" href="#" data-dead>
+      <div class="dev-cell dev-art-cell"><span class="fig-caption">KEYS</span><span class="dev-key-demo" aria-hidden="true"><span class="dev-key-top"><span class="ui-ic" data-ui="key-round"></span><strong>Personal key</strong><em>Shown once</em></span><code>zt_live_••••••••••••9f2</code><span class="dev-key-row"><span><span class="ui-ic" data-ui="lock"></span> Stored hashed</span><span><span class="ui-ic" data-ui="ban"></span> Revoke anytime</span></span></span></div>
+      <div class="dev-cell dev-text-cell"><span class="dev-arrow ui-ic" data-ui="arrow-up-right"></span><h4>Personal &amp; team keys</h4><p>Create a key in seconds. Shown once, stored hashed, revocable anytime — for you or your whole workspace.</p></div>
+    </a>
+    <a class="dev-row flip" href="#" data-dead>
+      <div class="dev-cell dev-text-cell"><span class="dev-arrow ui-ic" data-ui="arrow-up-right"></span><h4>Rate limits by plan</h4><p>Pro 60 · Team 120 · Business 300 requests a minute. Fair, predictable, and written down — never a surprise.</p></div>
+      <div class="dev-cell dev-art-cell"><span class="fig-caption">LIMITS</span><span class="dev-limit-demo" aria-hidden="true"><span class="dev-limit-row"><b>Pro</b><span class="dev-limit-track"><i style="--w:24%"></i></span><em>60/min</em></span><span class="dev-limit-row"><b>Team</b><span class="dev-limit-track"><i style="--w:48%"></i></span><em>120/min</em></span><span class="dev-limit-row"><b>Business</b><span class="dev-limit-track"><i style="--w:100%"></i></span><em>300/min</em></span><small>429 responses include a retry hint.</small></span></div>
+    </a>
+    <a class="dev-row" href="#" data-dead>
+      <div class="dev-cell dev-art-cell"><span class="fig-caption">USAGE</span><span class="dev-usage-demo mono" aria-hidden="true"><i><b>200</b><span>act_8f2 · transform</span><em>742 ms</em></i><i><b>200</b><span>act_8f3 · transform</span><em>1 action</em></i><i><b>429</b><span>rate limit</span><em>retry 12s</em></i></span></div>
+      <div class="dev-cell dev-text-cell"><span class="dev-arrow ui-ic" data-ui="arrow-up-right"></span><h4>Usage, fully logged</h4><p>Every request counts against the right plan allowance and shows up in your usage — down to the action.</p></div>
+    </a>
+    <a class="dev-row flip" href="#" data-dead>
+      <div class="dev-cell dev-text-cell"><span class="dev-arrow ui-ic" data-ui="arrow-up-right"></span><h4>Approval-safe workflows</h4><p>Trigger MCP workflows from your own systems — writes still wait for a human approval. Nothing runs silently.</p></div>
+      <div class="dev-cell dev-art-cell"><span class="fig-caption">WORKFLOWS</span><span class="dev-approval-demo" aria-hidden="true"><span class="dev-approval-top"><span data-brand="linear"></span><strong>linear.create_issue</strong><em>Approval</em></span><code>title: "Follow up: pricing page experiment"</code><span class="dev-approval-actions"><span class="primary"><span class="ui-ic" data-ui="check"></span> Approve</span><span><span class="ui-ic" data-ui="x"></span> Cancel</span></span></span></div>
+    </a>
+
+    <div class="dev-get-started"><a href="#" data-dead>Get started <span class="ui-ic" data-ui="arrow-up-right"></span></a></div>
+  </div>
+</section>
+
+<!-- ================= 13. FINAL CTA ================= -->
+<section class="section final" id="download">
+  <div class="container center reveal">
+    <div class="final-mark" aria-hidden="true"><span class="final-ring"></span><img class="brand-mark final-logo" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /></div>
+    <h2>Take the shortcut.</h2>
+    <p class="muted">Free for your first 50 AI actions every month. No credit card.</p>
+    <div class="hero-cta center">
+      <a class="btn btn-white btn-lg" href="#" data-dead><span data-brand-plain="windows11"></span> Download for Windows</a>
+      <a class="btn btn-dark btn-lg" href="#" data-dead><span data-brand-plain="apple"></span> Download for macOS</a>
+    </div>
+    <p class="hero-meta mono">Windows &amp; macOS desktop · English UI · Set up in under a minute</p>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#main"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+      <h5>Subscribe to our newsletter.</h5>
+      <p class="muted">Product updates, new Shortcuts and workflow ideas. Monthly, no spam.</p>
+      <form class="newsletter" id="newsletterForm">
+        <input type="email" required placeholder="you@company.com" aria-label="Email address" />
+        <button class="btn btn-white btn-sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-msg mono" id="newsletterMsg" role="status"></p>
+      <p class="tiny muted">By subscribing you agree to receive our monthly newsletter. Read our <a href="#" data-dead>privacy policy</a>. Unsubscribe anytime.</p>
+    </div>
+    <nav class="footer-col"><h6>Product</h6><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI engine</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">Developer API</a><a href="#download">Download</a></nav>
+    <nav class="footer-col"><h6>Core Features</h6><a href="#demo">Live demo</a><a href="#how">How it works</a><a href="#context">Context &amp; privacy</a><a href="#ai">Output formats</a><a href="#insert">Universal insertion</a><a href="#whatelse">What else</a><a href="shortcuts.html">Shortcut library</a></nav>
+    <nav class="footer-col"><h6>Top Shortcuts</h6><a href="shortcuts.html">Issue from Error</a><a href="shortcuts.html">The Polite Nudge</a><a href="shortcuts.html">Metrics Table</a><a href="shortcuts.html">Reply in Our Voice</a><a href="shortcuts.html">Summarise Article</a><a href="shortcuts.html">Create your own</a></nav>
+    <nav class="footer-col"><h6>Company</h6><a href="#" data-dead>About</a><a href="#" data-dead>Blog</a><a href="#" data-dead>Careers</a><a href="#" data-dead>Press Kit</a><a href="#" data-dead>Contact</a><a href="#" data-dead>Terms</a><a href="#" data-dead>Privacy</a></nav>
+    <nav class="footer-col"><h6>Community</h6><a href="#community">Guides</a><a href="api.html">Developers</a><a href="#" data-dead>API Docs</a><a href="#" data-dead>Support</a></nav>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© 2026 Zerthik. Turn any context into the output you need.</span>
+    <span class="footer-hotkey">Press <span class="kbd">Ctrl</span><span class="kbd">Space</span> anywhere. That's the whole trick.</span>
+  </div>
+  <div class="footer-streak" aria-hidden="true"></div>
+</footer>
+
+<div class="toast mono" id="toast" role="status"></div>
+
+<script src="icons.js"></script>
+<script src="lucide-icons.js"></script>
+<script src="app.js?v=6"></script>
+</body>
+</html>

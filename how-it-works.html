@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How it works — Zerthik</title>
+<meta name="description" content="How Zerthik works: select anything in any app, press one shortcut, say what you need — validated output lands where you work." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="pages.css" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/zerthik-favicon.png" />
+<link rel="apple-touch-icon" href="assets/zerthik-favicon.png" />
+</head>
+<body class="page-how">
+<header class="nav-wrap" id="navbar">
+  <nav class="nav glass">
+    <a class="brand" href="index.html" aria-label="Zerthik home"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+    <div class="nav-links" id="navLinks"><a href="how-it-works.html" class="page-active">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-white btn-sm" href="index.html#download">Download</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu"><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">API</a><a href="index.html#download">Download</a></div>
+</header>
+<main class="page-main" id="main" tabindex="-1">
+<section class="page-hero"><div class="container">
+  <span class="eyebrow"><span class="ui-ic" data-ui="mouse-pointer-click"></span> How it works</span>
+  <h1>One shortcut. Any app.<br/>Finished output.</h1>
+  <p class="lead">Zerthik is a thin layer over your whole desktop. You stay in the app you were using; it borrows just enough context, does the writing, and puts the result back where your cursor already is.</p>
+  <div class="page-actions"><a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download free</a><a class="btn btn-dark btn-lg" href="shortcuts.html">Explore Shortcuts</a></div>
+  <div class="page-meta"><span class="pill">Ctrl + Space on Windows</span><span class="pill">Option + Space on macOS</span><span class="pill">Opens in under 300 ms</span></div>
+</div></section><section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>The five-second workflow</h2><p>No new workspace to learn. No prompt tab to keep open. Just this loop, hundreds of times a day.</p></div>
+<div class="steps-rows reveal"><div class="step-row"><span class="num">STEP 01</span><h3>Select anything, anywhere</h3><p>Text in a doc, an error in a terminal, a table in a screenshot, a thread in your inbox. If you can select it — or point a screenshot at it — it can become context.</p></div><div class="step-row"><span class="num">STEP 02</span><h3>Press the global shortcut</h3><p>Ctrl + Space on Windows, Option + Space on macOS. The floating command card appears over your current app in under 300 ms. Nothing to open, nothing to switch to.</p></div><div class="step-row"><span class="num">STEP 03</span><h3>Check your context chips</h3><p>Selected text, clipboard, the active app, a screenshot and any MCP context arrive as removable chips. You see exactly what will be sent — and can remove any of it before running.</p></div><div class="step-row"><span class="num">STEP 04</span><h3>Say it, or type it</h3><p>Dictate or type the instruction in plain words: “turn this into a polite follow-up”, “make this a table”, “file this as an issue”. Or run a saved Shortcut by name.</p></div><div class="step-row"><span class="num">STEP 05</span><h3>It lands where you work</h3><p>The validated result is inserted straight into the focused field — accessibility insert first, with clipboard and typing fallbacks. Most simple transforms finish in under 5 seconds.</p></div></div></div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>What the command card sees</h2><p>Context is explicit and removable. Sensitive apps are blocked by default, and screenshots are only ever taken when you ask.</p></div>
+<div class="desktop-frame reveal">
+  <div class="desktop-bar"><span class="dots"><i></i><i></i><i></i></span><span>Visual Studio Code — checkout.ts</span><span class="right mono">Zerthik · ready</span></div>
+  <div class="desktop-body"><div class="mini-demo glass-window">
+    <div class="chips"><span class="ctx-chip">Selected text · Terminal</span><span class="ctx-chip">Clipboard</span><span class="ctx-chip">Active app · VS Code</span><span class="ctx-chip ctx-mcp">MCP · GitHub (read)</span></div>
+    <div class="mini-cmd"><span class="ui-ic" data-ui="mic"></span> “Create an issue draft from this error, with repro steps.”</div>
+    <div class="mini-out"><strong>### Bug: Checkout crashes for guest users</strong><br/>Steps to reproduce, expected vs actual, and the captured stack trace — written and validated for the issue form.</div>
+  </div></div>
+</div></div></section>
+<section class="page-section"><div class="container">
+  <div class="showcase reveal"><div class="showcase-copy"><h3>Always one shortcut away</h3><p>No dock icon to hunt, no tab to keep alive. The same two keys summon Zerthik over every app you own — and dismiss it just as fast.</p></div>
+    <div class="showcase-visual"><div class="key-visual"><span class="kbd">Ctrl</span>+<span class="kbd space">Space</span></div><div class="key-visual" style="min-height:64px"><span class="kbd"><span class="ui-ic kbd-ic" data-ui="option"></span> Option</span>+<span class="kbd space">Space</span></div></div></div>
+  <div class="showcase flip reveal"><div class="showcase-copy"><h3>Context you can audit</h3><p>Everything Zerthik is about to use sits in front of you as chips. Remove one and it is gone from the request — before anything runs.</p></div>
+    <div class="showcase-visual"><div class="command-list">
+      <div class="list-label">Attached context</div>
+      <div class="command-row hot"><span class="ui-ic" data-ui="scan-text"></span> Selected text <small>Terminal</small></div>
+      <div class="command-row"><span class="ui-ic" data-ui="clipboard"></span> Clipboard <small>1 item</small></div>
+      <div class="command-row"><span class="ui-ic" data-ui="camera"></span> Screenshot <small>off</small></div>
+      <div class="command-row"><span class="ui-ic" data-ui="plug"></span> MCP · GitHub <small>read-only</small></div>
+    </div></div></div>
+</div></section>
+<section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Built for speed, honest about limits</h2></div>
+<div class="page-grid-3"><article class="page-card reveal"><span class="ic-badge" data-ui="timer"></span><h4>Under 300 ms to open</h4><p>The command card is a native overlay, not a web page waking up. It is there before your hands leave the keyboard.</p><div class="foot mono">TARGET · COMMAND CARD</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="scan-text"></span><h4>Screenshots in under 10 s</h4><p>Point Zerthik at a table, dashboard or error dialog. It reads the pixels and returns structured text, a table or code.</p><div class="foot mono">TARGET · SCREENSHOT CONTEXT</div></article><article class="page-card reveal"><span class="ic-badge" data-ui="shield-check"></span><h4>Private by construction</h4><p>Password managers, banking and other sensitive apps are blocked by default. Context is shown as chips before anything runs.</p><div class="foot mono">BLOCKED BY DEFAULT</div></article></div></div></section><section class="page-section"><div class="container"><div class="page-section-head reveal"><h2>Under the hood, in plain English</h2><p>The details people ask about after the first demo.</p></div>
+<dl class="spec-table reveal">
+  <div class="spec-row"><dt>trigger</dt><dd>Ctrl + Space on Windows · Option + Space on macOS — rebindable in Settings. Command card target: under 300 ms.</dd></div>
+  <div class="spec-row"><dt>context sources</dt><dd>Selected text, clipboard, active app &amp; window, optional screenshot, and MCP context you explicitly connected. Every source arrives as a removable chip.</dd></div>
+  <div class="spec-row"><dt>command input</dt><dd>Voice dictation or typed text. Saved Shortcuts run by name with a fixed tone and output format.</dd></div>
+  <div class="spec-row"><dt>output</dt><dd>Validated text, Markdown, table, CSV/TSV or code. Simple transforms target under 5 seconds; screenshots under 10.</dd></div>
+  <div class="spec-row"><dt>insertion</dt><dd>Accessibility insert, then clipboard paste, then keyboard simulation — target under 500 ms — with a safe copy-to-clipboard fallback.</dd></div>
+  <div class="spec-row"><dt>blocked by default</dt><dd>Password managers, banking and finance apps, and private windows never provide context unless you change the rules yourself.</dd></div>
+</dl></div></section><section class="container"><div class="page-cta reveal">
+  <h2>Take the shortcut.</h2><p>Download Zerthik for Windows and macOS. Every new account starts with 14 days of Pro free — no card required, then 50 actions a month on Free.</p>
+  <div class="page-actions" style="justify-content:center">
+    <a class="btn btn-white btn-lg" href="index.html#download"><span class="ui-ic" data-ui="download"></span> Download Zerthik</a>
+    <a class="btn btn-dark btn-lg" href="pricing.html">See pricing</a>
+  </div></div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/zerthik-logo.png" alt="" aria-hidden="true" /><span class="brand-name">Zerthik</span></a>
+      <h5>Subscribe to our newsletter.</h5>
+      <p class="muted">Product updates, new Shortcuts and workflow ideas. Monthly, no spam.</p>
+      <form class="newsletter" id="newsletterForm">
+        <input type="email" required placeholder="you@company.com" aria-label="Email address" />
+        <button class="btn btn-white btn-sm" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-msg mono" id="newsletterMsg" role="status"></p>
+      <p class="tiny muted">By subscribing you agree to receive our monthly newsletter. Read our <a href="#" data-dead>privacy policy</a>. Unsubscribe anytime.</p>
+    </div>
+    <nav class="footer-col"><h6>Product</h6><a href="how-it-works.html">How it works</a><a href="shortcuts.html">Shortcuts</a><a href="ai.html">AI engine</a><a href="mcp.html">MCP</a><a href="pricing.html">Pricing</a><a href="api.html">Developer API</a><a href="index.html#download">Download</a></nav>
+    <nav class="footer-col"><h6>Core Features</h6><a href="index.html#demo">Live demo</a><a href="index.html#how">How it works</a><a href="index.html#context">Context &amp; privacy</a><a href="index.html#ai">Output formats</a><a href="index.html#insert">Universal insertion</a><a href="index.html#whatelse">What else</a><a href="shortcuts.html">Shortcut library</a></nav>
+    <nav class="footer-col"><h6>Top Shortcuts</h6><a href="shortcuts.html">Issue from Error</a><a href="shortcuts.html">The Polite Nudge</a><a href="shortcuts.html">Metrics Table</a><a href="shortcuts.html">Reply in Our Voice</a><a href="shortcuts.html">Summarise Article</a><a href="shortcuts.html">Create your own</a></nav>
+    <nav class="footer-col"><h6>Company</h6><a href="#" data-dead>About</a><a href="#" data-dead>Blog</a><a href="#" data-dead>Careers</a><a href="#" data-dead>Press Kit</a><a href="#" data-dead>Contact</a><a href="#" data-dead>Terms</a><a href="#" data-dead>Privacy</a></nav>
+    <nav class="footer-col"><h6>Community</h6><a href="index.html#community">Guides</a><a href="api.html">Developers</a><a href="#" data-dead>API Docs</a><a href="#" data-dead>Support</a></nav>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© 2026 Zerthik. Turn any context into the output you need.</span>
+    <span class="footer-hotkey">Press <span class="kbd">Ctrl</span><span class="kbd">Space</span> anywhere. That's the whole trick.</span>
+  </div>
+  <div class="footer-streak" aria-hidden="true"></div>
+</footer>
+<div class="toast mono" id="toast" role="status"></div>
+<script src="icons.js"></script>
+<script src="lucide-icons.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

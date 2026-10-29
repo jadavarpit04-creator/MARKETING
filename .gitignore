@@ -1,0 +1,7 @@
+# Generated download artifact
+zerthik-marketing-page.zip
+
+# Separate MCP handoff file, not part of the marketing page
+all-mcp-servers.json
+
+.DS_Store

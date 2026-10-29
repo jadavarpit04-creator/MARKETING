@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "universal-icons": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-universal-icons"
+      ]
+    },
+    "magicui": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@magicuidesign/mcp@latest"
+      ]
+    }
+  }
+}
